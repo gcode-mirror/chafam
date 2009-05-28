@@ -1,0 +1,50 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost/Prototipo/">
+    <file relUrl="Images/Master.bmp" publishTime="05/18/2009 14:49:47" />
+    <file relUrl="Css/StyleSheet.css" publishTime="05/18/2009 11:51:58" />
+    <file relUrl="FormaDePago.aspx" publishTime="05/19/2009 10:05:52" />
+    <file relUrl="bin/ProtipoWeb.pdb" publishTime="05/19/2009 10:08:04" />
+    <file relUrl="UserBeforeNew.aspx" publishTime="05/19/2009 10:06:54" />
+    <file relUrl="recursos/AjaxControlToolkit.dll" publishTime="05/11/2009 21:50:10" />
+    <file relUrl="Images/EjemploPago.JPG" publishTime="05/18/2009 15:05:40" />
+    <file relUrl="Images/IconHelp.PNG" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="Images/Ejemplo.JPG" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="Images/American.bmp" publishTime="05/18/2009 14:49:47" />
+    <file relUrl="UserNotMemberNew.aspx" publishTime="05/18/2009 12:55:10" />
+    <file relUrl="Images/Calendar_scheduleHS.png" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="bin/ProtipoWeb.dll" publishTime="05/19/2009 10:08:04" />
+    <file relUrl="Images/Visa.bmp" publishTime="05/18/2009 14:49:47" />
+    <file relUrl="SubsidiosForm.aspx" publishTime="05/18/2009 16:01:19" />
+    <file relUrl="web.config" publishTime="05/15/2009 00:04:44" />
+    <file relUrl="Page/FormPrint.htm" publishTime="05/11/2009 21:49:10" />
+    <file relUrl="UserNew.aspx" publishTime="05/18/2009 18:12:54" />
+    <file relUrl="default.Master" publishTime="05/14/2009 18:23:40" />
+    <file relUrl="Images/Discover.bmp" publishTime="05/18/2009 14:49:47" />
+    <file relUrl="CotizadorSeguroSoat.aspx" publishTime="05/18/2009 14:52:30" />
+    <file relUrl="Images/PayPal_mark_37x23.gif" publishTime="05/18/2009 14:48:48" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost:8089/">
+    <file relUrl="Images/Calendar_scheduleHS.png" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="recursos/AjaxControlToolkit.dll" publishTime="05/11/2009 21:50:10" />
+    <file relUrl="Page/FormPrint.htm" publishTime="05/11/2009 21:49:10" />
+    <file relUrl="Images/IconHelp.PNG" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="Css/StyleSheet.css" publishTime="05/11/2009 21:49:16" />
+    <file relUrl="web.config" publishTime="05/11/2009 22:07:26" />
+    <file relUrl="bin/ProtipoWeb.pdb" publishTime="05/11/2009 22:16:52" />
+    <file relUrl="Images/Ejemplo.JPG" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="SubsidiosForm.aspx" publishTime="05/11/2009 22:09:54" />
+    <file relUrl="bin/ProtipoWeb.dll" publishTime="05/11/2009 22:16:52" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost/">
+    <file relUrl="Images/Calendar_scheduleHS.png" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="recursos/AjaxControlToolkit.dll" publishTime="05/11/2009 21:50:10" />
+    <file relUrl="Page/FormPrint.htm" publishTime="05/11/2009 21:49:10" />
+    <file relUrl="Images/IconHelp.PNG" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="Css/StyleSheet.css" publishTime="05/11/2009 21:49:16" />
+    <file relUrl="web.config" publishTime="05/11/2009 22:07:26" />
+    <file relUrl="bin/ProtipoWeb.pdb" publishTime="05/11/2009 22:16:52" />
+    <file relUrl="Images/Ejemplo.JPG" publishTime="05/11/2009 21:49:02" />
+    <file relUrl="SubsidiosForm.aspx" publishTime="05/11/2009 22:09:54" />
+    <file relUrl="bin/ProtipoWeb.dll" publishTime="05/11/2009 22:16:52" />
+  </publishTarget>
+</publishData>
