@@ -1,0 +1,43 @@
+Datos del Trabajador,0,8,0
+NIT ,1,1,13
+Nombre o Razón social,1,11,20
+Ciudad,1,11,20
+Código ciudad,1,1,3
+Dirección,1,11,20
+Teléfono 1,1,1,10
+Teléfono 2,0,1,10
+AA,0,11,0
+Fax,0,1,10
+Correo Electrónico,1,3,60
+¿Es entidad docente?,1,11,1
+Nombre Gerente o Representante Legal,1,11,30
+Nombre Jefe de Personal,1,11,30
+N° de Escritura Constitución,1,1,0
+N° Notaria,1,1,0
+Fecha Constitución,1,3,8
+DATOS ESPECÍFICOS,0,8,0
+Tipo de empresa ,1,1,1
+Clase de sociedad,1,1,2
+Clase de sociedad ,0,11,20
+Clase de actividad económica registrada para efectos tributarios RUT (CIUC),1,11,0
+Nombre ,1,11,0
+Código,1,1,0
+Indique qué porcentaje de aportes debe realizar los por siguientes conceptos:,0,11,0
+Subsidio Familiar,1,1,3
+SENA,1,1,3
+ICBF,1,1,3
+ESAP,1,1,3
+Institutos Técnicos,1,1,3
+¿Es filial de otra empresa ya afiliada a la Caja?,1,11,1
+¿Cuál? ,0,11,20
+¿La casa matriz se encuentra ubicada en la ciudad de?,1,11,20
+Si es sustitución patronal con una empresa afiliada a Cafam, indique los siguientes datos de la entidad a sustituir:,0,11,0
+NIT,0,1,13
+Nombre o razón social,0,11,20
+¿Estuvo o está la compañía afiliada a una Caja de Compensación Familiar? ,1,11,1
+¿Cuál?,0,11,20
+Indique el motivo por el cual se desafilia de esa Caja,0,11,40
+OTROS DATOS,0,8,0
+Número total de trabajadores,1,1,0
+Valor de la última nómina $,1,1,0
+Correspondiente al mes de ,1,11,0
