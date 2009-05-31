@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://Globant.PortalWeb.BiztalkSubsidios.SchemaUserRequest" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://BizTalk_Server_Project1.SchemaAfiliatedUser" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://Globant.PortalWeb.BiztalkSubsidios.SchemaUserRequest" />
+      <s:import namespace="http://BizTalk_Server_Project1.SchemaAfiliatedUser" />
+      <s:element name="GetAffiliatedUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:UserRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAffiliatedUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s2:AffiliatedUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Globant.PortalWeb.BiztalkSubsidios.SchemaUserRequest">
+      <s:element name="UserRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="TipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NroDocumento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://BizTalk_Server_Project1.SchemaAfiliatedUser">
+      <s:element name="AffiliatedUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TipoAfiliado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Identificacion">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nro" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="IdentificacionPrincipal">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nro" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PrimerApellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SegundoApellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PrimerNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SegundoNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="FechaNacimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Sexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="EstadoCivil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="eMail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NIT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SubNIT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NombreORazonSocial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cargo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TelefonoLaboral" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TelefonoMovil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="CodigoPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="CodigoDepartamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ciudad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Localidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DomicilioTrabajador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="CategoriaSalarial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ClaseAfiliado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAffiliatedUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAffiliatedUser" />
+  </wsdl:message>
+  <wsdl:message name="GetAffiliatedUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAffiliatedUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSSubsidiosSoap">
+    <wsdl:operation name="GetAffiliatedUser">
+      <wsdl:input message="tns:GetAffiliatedUserSoapIn" />
+      <wsdl:output message="tns:GetAffiliatedUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSubsidiosSoap" type="tns:WSSubsidiosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAffiliatedUser">
+      <soap:operation soapAction="http://tempuri.org/WSSubsidios/GetAffiliatedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSSubsidiosSoap12" type="tns:WSSubsidiosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAffiliatedUser">
+      <soap12:operation soapAction="http://tempuri.org/WSSubsidios/GetAffiliatedUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSSubsidios">
+    <wsdl:port name="WSSubsidiosSoap" binding="tns:WSSubsidiosSoap">
+      <soap:address location="http://saplsaflores93/BizTalkWebService/WSSubsidios.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSSubsidiosSoap12" binding="tns:WSSubsidiosSoap12">
+      <soap12:address location="http://saplsaflores93/BizTalkWebService/WSSubsidios.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

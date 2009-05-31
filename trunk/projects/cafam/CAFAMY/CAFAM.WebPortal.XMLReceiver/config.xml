@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FORMS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:tns="http://tempuri.org/" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2009-02-27T14:49:20">
+<FORM name="InscripcionRevistaVivemas">EXEC [dbo].[uspFormInscripcionRevistaVivemas_Insert]  @FirstName = 'my:FirstName', @SecondName = 'my:SecondName', @FirstSurname = 'my:FirstSurname', @SecondSurname = 'my:SecondSurname', @Address = 'my:AddressOriginal', @City = 'my:CityOriginal', @AddressOtherCombo1 = 'my:AddressOtherCombo1', @AddressOtherText1 = 'my:AddressOtherText1', @AddressOtherCombo2 = 'my:AddressOtherCombo2', @AddressOtherCombo3 = 'my:AddressOtherCombo3', @AddressOtherText2 = 'my:AddressOtherText2', @AddressOtherCombo4 = 'my:AddressOtherCombo4', @AddressOtherText3 = 'my:AddressOtherText3', @AddressOtherCombo5 = 'my:AddressOtherCombo5', @AddressOtherText4 = 'my:AddressOtherText4', @AddressOtherCombo6 = 'my:AddressOtherCombo6', @AddressOtherText5 = 'my:AddressOtherText5', @CityOther = 'my:CityOther', @DepartmentOther = 'my:DepartmentOther', @LocalityOther = 'my:LocalityOther' </FORM>
+<FORM name="SuspensionTrabajadoresOld">EXEC [dbo].[uspFormSuspencionTrabajadores_Insert]    
+  @NIT = 'my:NIT', @SUBNIT = N'3',@Name = 'my:Name', @IdType = 'my:IdType', @IdNumber = 'my:IdNumber', @City = 'my:City', @FirstName = 'my:FirstName', @SecondName = 'my:SecondName', @FirstSurname = 'my:FirstSurname', @SecondSurname = 'my:SecondSurname', @SuspentionStart = 'my:SuspentionStart', @SuspentionStop = 'my:SuspentionStop'</FORM>
+<FORM name="SuspensionTrabajadores">
+  <my:myFields>
+    EXEC [dbo].[uspFormSuspensionTrabajadores_Insert] @CurrentUser = 'my:CurrentUser'
+    DECLARE @MYID INT
+    SET @MYID = @@IDENTITY
+  </my:myFields>
+  <my:Trabajador>
+    EXEC [dbo].[uspFormSuspensionTrabajadoresDetalle_Insert]
+    @IDSusp = @MYID, @SUBNIT = my:SUBNIT, @NIT = 'my:NIT', @Name = 'my:Name', @IDType = 'my:IDType', @IDNumber = 'my:IDNumber', @FirstName = 'my:FirstName', @SecondName = 'my:SecondName', @FirstSurname = 'my:FirstSurname', @SecondSurname = 'my:SecondSurname', @SuspentionStart = 'my:StartDate', @SuspentionStop = 'my:EndDate'
+  </my:Trabajador>
+</FORM>
+</FORMS>

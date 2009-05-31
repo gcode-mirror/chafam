@@ -1,0 +1,13 @@
+C:\CAFAM.WebPortal\CAFAM.WebPortal.XMLReceiver\bin\CAFAM.WebPortal.XMLReceiver.dll
+C:\CAFAM.WebPortal\CAFAM.WebPortal.XMLReceiver\bin\CAFAM.WebPortal.XMLReceiver.pdb
+C:\CAFAM.WebPortal\CAFAM.WebPortal.XMLReceiver\obj\Debug\ResolveAssemblyReference.cache
+C:\CAFAM.WebPortal\CAFAM.WebPortal.XMLReceiver\obj\Debug\CAFAM.WebPortal.XMLReceiver.dll
+C:\CAFAM.WebPortal\CAFAM.WebPortal.XMLReceiver\obj\Debug\CAFAM.WebPortal.XMLReceiver.pdb
+C:\CAFAMX\CAFAM.WebPortal.XMLReceiver\obj\Debug\ResolveAssemblyReference.cache
+C:\CAFAMX\CAFAM.WebPortal.XMLReceiver\obj\Debug\CAFAM.WebPortal.XMLReceiver.pdb
+C:\CAFAMX\CAFAM.WebPortal.XMLReceiver\bin\CAFAM.WebPortal.XMLReceiver.dll
+C:\CAFAMX\CAFAM.WebPortal.XMLReceiver\bin\CAFAM.WebPortal.XMLReceiver.pdb
+C:\CAFAMX\CAFAM.WebPortal.XMLReceiver\obj\Debug\CAFAM.WebPortal.XMLReceiver.dll
+C:\CAFAMX\CAFAM.WebPortal.XMLReceiver\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\CAFAMX\CAFAM.WebPortal.XMLReceiver\bin\Microsoft.ApplicationBlocks.Data.pdb
+C:\CAFAMX\CAFAM.WebPortal.XMLReceiver\bin\Microsoft.ApplicationBlocks.Data.xml

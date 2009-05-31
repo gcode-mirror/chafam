@@ -1,0 +1,17 @@
+C:\CAFAM.WebPortal\CAFAM.WebPortal.Commons\bin\Debug\CAFAM.WebPortal.Commons.dll
+C:\CAFAM.WebPortal\CAFAM.WebPortal.Commons\bin\Debug\CAFAM.WebPortal.Commons.pdb
+C:\CAFAM.WebPortal\CAFAM.WebPortal.Commons\bin\Debug\CAFAM.WebPortal.Entities.dll
+C:\CAFAM.WebPortal\CAFAM.WebPortal.Commons\bin\Debug\CAFAM.WebPortal.Entities.pdb
+C:\CAFAM.WebPortal\CAFAM.WebPortal.Commons\obj\Debug\ResolveAssemblyReference.cache
+C:\CAFAM.WebPortal\CAFAM.WebPortal.Commons\obj\Debug\CAFAM.WebPortal.Commons.dll
+C:\CAFAM.WebPortal\CAFAM.WebPortal.Commons\obj\Debug\CAFAM.WebPortal.Commons.pdb
+C:\CAFAMX\CAFAM.WebPortal.Commons\obj\Debug\ResolveAssemblyReference.cache
+C:\CAFAMX\CAFAM.WebPortal.Commons\obj\Debug\CAFAM.WebPortal.Commons.pdb
+C:\CAFAMX\CAFAM.WebPortal.Commons\bin\Debug\CAFAM.WebPortal.Commons.dll
+C:\CAFAMX\CAFAM.WebPortal.Commons\bin\Debug\CAFAM.WebPortal.Commons.pdb
+C:\CAFAMX\CAFAM.WebPortal.Commons\obj\Debug\CAFAM.WebPortal.Commons.dll
+C:\CAFAMX\CAFAM.WebPortal.Commons\bin\Debug\CAFAM.WebPortal.Entities.dll
+C:\CAFAMX\CAFAM.WebPortal.Commons\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\CAFAMX\CAFAM.WebPortal.Commons\bin\Debug\Microsoft.ApplicationBlocks.Data.pdb
+C:\CAFAMX\CAFAM.WebPortal.Commons\bin\Debug\Microsoft.ApplicationBlocks.Data.xml
+C:\CAFAMX\CAFAM.WebPortal.Commons\bin\Debug\CAFAM.WebPortal.Entities.pdb

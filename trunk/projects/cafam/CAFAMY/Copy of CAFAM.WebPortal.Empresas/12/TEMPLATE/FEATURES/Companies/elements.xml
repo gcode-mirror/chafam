@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="UserPages" Url="CAFAMPages" RootWebOnly="TRUE" Path="Pages">
+    <File Url="SubsidyUpload.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Carga de Subsidios"></Property>
+    </File>
+    <File Url="HelloWorld.aspx" Type="GhostableInLibrary">
+	    <Property Name="Title" Value="Hello World"></Property>
+    </File>    
+    <File Url="UploadFiles.aspx" Type="GhostableInLibrary">
+	    <Property Name="Title" Value="Upload archivos"></Property>
+    </File>
+  </Module>
+</Elements> 

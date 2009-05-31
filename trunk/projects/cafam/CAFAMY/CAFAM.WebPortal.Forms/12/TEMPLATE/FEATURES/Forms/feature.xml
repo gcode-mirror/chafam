@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="bec1f53a-93dc-4c5b-96fa-bc4e48519ba8"
+          Title="Cafam - Forms Features"
+          Description="This feature contains the users management pages."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          ImageUrl="FeatureCafam.gif"
+          Scope="Site"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>
