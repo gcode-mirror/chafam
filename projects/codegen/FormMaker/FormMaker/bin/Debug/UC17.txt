@@ -1,0 +1,11 @@
+nit|1|1|13|se autocompleta|NIT|tblFormSuspensionTrabajadores
+sub nit|0|1|2|se autocompleta|SUBNIT|tblFormSuspensionTrabajadores
+nombre o razón social|1|2|34|se autocompleta (en el sistema de subsidios tiene longitud 60)|RazonSocial|tblFormSuspensionTrabajadores
+tipo de identificación|1|1|1|es un check, 1= CC, 2= TI, 3=CE|IdType|tblFormSuspensionTrabajadoresDetalle
+numero de identificación|1|1|11||IdNumber|tblFormSuspensionTrabajadoresDetalle
+primer apellido|1|2|20||FirstName|tblFormSuspensionTrabajadoresDetalle
+segundo apellido|0|2|20||SecondName|tblFormSuspensionTrabajadoresDetalle
+primer nombre|1|2|20||FirstSurname|tblFormSuspensionTrabajadoresDetalle
+segundo nombre|0|2|20||SecondSurname|tblFormSuspensionTrabajadoresDetalle
+fecha de la suspensión inicial|1|3|0|AAAAMMDD|SuspentionStart|tblFormSuspensionTrabajadoresDetalle
+fecha de la suspensión final|1|3|0|AAAAMMDD|SuspentionStop|tblFormSuspensionTrabajadoresDetalle

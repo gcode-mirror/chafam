@@ -1,0 +1,90 @@
+datos de la empresa|0|8|0|||
+nit|1|1|13|se autocompleta|COMPNIT|tblNovedadesTrabajadores
+sub nit|1|1|2|se autocompleta. Puede ser 0|COMPSUBNIT|tblNovedadesTrabajadores
+nombre o razón social|1|2|34|se autocompleta (en el sistema de subsidios tiene longitud 60)|COMPNAME|tblNovedadesTrabajadores
+datos del trabajador|0|8|0|||
+tipo de identificación|1|1|1|es un check, 1= CC, 2= TI, 3=CE|EMPIDTYPE|tblNovedadesTrabajadores
+número de identificación|1|1|13||EMPIDNUM|tblNovedadesTrabajadores
+sucursal|1|1|5||EMPBRANCH|tblNovedadesTrabajadores
+primer apellido|1|2|20||EMPFIRSTSURNAME|tblNovedadesTrabajadores
+segundo apellido|0|2|20||EMPSECONDSURNAME|tblNovedadesTrabajadores
+primer nombre|1|2|20||EMPFIRSTNAME|tblNovedadesTrabajadores
+segundo nombre|0|2|20||EMPSECONDNAME|tblNovedadesTrabajadores
+estado civil|1|1|1|es un check, soltero, casado, viudo, separado, unión libre|EMPMARITALSTATE|tblNovedadesTrabajadores
+fecha de nacimiento|1|3|0|AAAAMMDD|EMPBIRTHDATE|tblNovedadesTrabajadores
+sexo|1|1|1|es un check, masculino, femenino|EMPGENDER|tblNovedadesTrabajadores
+fecha de ingreso a la empresa|1|3|0|AAAAMMDD|EMPJOININGDATE|tblNovedadesTrabajadores
+cargo|1|2|11||EMPPOSITION|tblNovedadesTrabajadores
+horas mes|1|1|3||EMPMONTHHOUR|tblNovedadesTrabajadores
+sueldo básico|1|1|9||EMPBASICSALARY|tblNovedadesTrabajadores
+comisión en ventas|1|1|9||EMPSALECOMMISSION|tblNovedadesTrabajadores
+ciudad|1|2|11||EMPCITY|tblNovedadesTrabajadores
+domicilio|1|2|24|Formato de direcciones|EMPADDRESS|tblNovedadesTrabajadores
+e-mail|1|2|23|Formato de Correo Electrónico|EMPEMAIL|tblNovedadesTrabajadores
+teléfono 1|1|1|14||EMPPHONENUMB1|tblNovedadesTrabajadores
+teléfono 2|1|1|14||EMPPHONENUMB2|tblNovedadesTrabajadores
+¿es socio o propietario de la empresa?|1|4|1||EMPOWNER|tblNovedadesTrabajadores
+¿es trabajador del sector agrario?|1|4|1||EMPAGRICULTUREW|tblNovedadesTrabajadores
+¿labora en otra empresa?|1|4|1|||
+nit|0|1|13|se debe completar si la pregunta anterior es verdadera|EMPCOMPNIT|tblNovedadesTrabajadores
+sub nit|0|1|2|se debe completar si la pregunta anterior es verdadera|EMPCOMPSUBNIT|tblNovedadesTrabajadores
+nombre o razón social|0|2|29|se debe completar si la pregunta anterior es verdadera|EMPCOMPNAME|tblNovedadesTrabajadores
+horas mes|0|1|3|se debe completar si la pregunta anterior es verdadera|EMPCOMPMONTHHOUR|tblNovedadesTrabajadores
+sueldo básico|0|1|9|se debe completar si la pregunta anterior es verdadera|EMPCOMPBASICSALARY|tblNovedadesTrabajadores
+comisión en ventas|0|1|9|se debe completar si la pregunta anterior es verdadera|EMPCOMPSALECOMMISSION|tblNovedadesTrabajadores
+datos del cónyuge o compañera(o)|0|8|0|||
+desea ingresar un cónyuge|1|4|0|||
+tipo de identificación|0|1|1|es un check, 1= CC, 2= TI, 3=CE|PARTNERIDTYPE|tblNovedadesTrabajadores
+número de identificación|0|1|13||PARTNERIDNUM|tblNovedadesTrabajadores
+conviven|0|4|1||PARTNERLIVETOGETHER|tblNovedadesTrabajadores
+tipo de relación|0|1|1|es un check, cónyuge, compañera(o)|PARTNERRELATIONSHIP|tblNovedadesTrabajadores
+primer apellido|0|2|20||PARTNERFIRSTSURNAME|tblNovedadesTrabajadores
+segundo apellido|0|2|20||PARTNERSECONDSURNAME|tblNovedadesTrabajadores
+primer nombre|0|2|20||PARTNERFIRSTNAME|tblNovedadesTrabajadores
+segundo nombre|0|2|20||PARTNERSECONDNAME|tblNovedadesTrabajadores
+fecha de nacimiento|0|3|0|AAAAMMDD|PARTNERBIRTHDATE|tblNovedadesTrabajadores
+domicilio|0|2|24|Si conviven, se autocompleta. Formato de direcciones.|PARTNERADDRESS|tblNovedadesTrabajadores
+ciudad|0|2|11|Si conviven se autocompleta.|PARTNERCITY|tblNovedadesTrabajadores
+teléfono|0|1|14||PARTNERPHONENUMB|tblNovedadesTrabajadores
+ocupación|0|1|1|es un check, hogar, empleado, independiente, pensionado, sin empleo|PARTNEROCCUPATION|tblNovedadesTrabajadores
+si el cónyuge o compañera/o es empleado diligencie:|0|7|0|||
+recibe subsidio|0|4|1|es obligatorio si el campo ocupación  esta marcado con empleado|PARTNEROCCUPSUBSIDY|tblNovedadesTrabajadores
+nit|0|1|13|es obligatorio si el campo ocupación  esta marcado con empleado|PARTNEROCCUPNIT|tblNovedadesTrabajadores
+nombre o razón social de la empresa donde trabaja|0|2|27|es obligatorio si el campo ocupación  esta marcado con empleado|PARTNEROCCUPCOMPANYNAME|tblNovedadesTrabajadores
+sueldo básico|0|1|9|es obligatorio si el campo ocupación  esta marcado con empleado|PARTNEROCCUPBASICSALARY|tblNovedadesTrabajadores
+datos del padre o madre biológica(o) del hijo a inscribir|0|8|0|||
+tipo de identificación|0|1|1|es un check, 1= CC, 2= TI, 3=CE|PARENTIDTYPE|tblNovedadesTrabajadores
+numero de identificación|0|1|13||PARENTIDNUM|tblNovedadesTrabajadores
+conviven|0|4|1||PARENTLIVETOGETHER|tblNovedadesTrabajadores
+padre o madre biológica|0|1|1|se autocompleta cuando se completa algún campo de este cuadro||
+primer apellido|0|2|20||PARENTFIRSTSURNAME|tblNovedadesTrabajadores
+segundo apellido|0|2|20||PARENTSECONDSURNAME|tblNovedadesTrabajadores
+primer nombre|0|2|20||PARENTFIRSTNAME|tblNovedadesTrabajadores
+segundo nombre|0|2|20||PARENTSECONDNAME|tblNovedadesTrabajadores
+fecha de nacimiento|0|3|0|AAAAMMDD|PARENTBIRTHDATE|tblNovedadesTrabajadores
+ocupación|0|1|1|es un check, hogar, empleado, independiente, pensionado, sin empleo|PARENTOCCUPATION|tblNovedadesTrabajadores
+domicilio|0|2|24||PARENTADDRESS|tblNovedadesTrabajadores
+ciudad|0|2|11||PARENTCITY|tblNovedadesTrabajadores
+teléfono|0|1|14||PARENTPHONENUMB|tblNovedadesTrabajadores
+si el padre o madre biológica es empleado diligencie:|0|7|0|||
+recibe subsidio|0|4|1|es obligatorio si el campo empleado esta marcado|PARENTEMPLOYEESUBSIDY|tblNovedadesTrabajadores
+nombre de los hijos por los que recibe el subsidio|0|2|50|Es obligatorio si coloca que recibe subsidio.|PARENTEMPLOYEESONNAME|tblNovedadesTrabajadores
+nit|0|1|13|es obligatorio si el campo empleado esta marcado|PARENTEMPLOYEENIT|tblNovedadesTrabajadores
+nombre o razón social de la empresa donde trabaja|0|2|27|es obligatorio si el campo empleado esta marcado|PARENTEMPLOYEECOMPNAME|tblNovedadesTrabajadores
+sueldo básico|0|1|9|es obligatorio si el campo empleado esta marcado|PARENTEMPLOYEEBASICSALARY|tblNovedadesTrabajadores
+personas a cargo|0|8|0|||
+cantidad de personas que va a inscribir|0|1|2|Habilita los campos para cargar la cantidad de personas solicitadas. Todos los campos son obligatorios.||
+Repeater|0|12|0|||
+tipo de identificación|0|1|1|es un check, RC, CC, TI, CE|DEPENDIDTYPE|tblNovedadesDetalle
+numero de identificación|0|1|13||DEPENDIDNUM|tblNovedadesDetalle
+tipo de identificación del padre asociado|1|1|1|Si va a inscribir personas a cargo es obligatorio|DEPENDPARENTIDTYPE|tblNovedadesDetalle
+número  de identificación del padre asociado|0|1|13|Si va a inscribir personas a cargo es obligatorio|DEPENDPARENTIDNUM|tblNovedadesDetalle
+sexo|0|1|1||DEPENDPARENTGENDER|tblNovedadesDetalle
+fecha de nacimiento|0|3|0|AAAAMMDD|DEPENDBIRTHDATE|tblNovedadesDetalle
+primer apellido|0|2|20||DEPENDFIRSTSURENAME|tblNovedadesDetalle
+segundo apellido|0|2|20||DEPENDSECONDSURENAME|tblNovedadesDetalle
+primer nombre|0|2|20||DEPENDFIRSTNAME|tblNovedadesDetalle
+segundo nombre|0|2|20||DEPENDSECONDNAME|tblNovedadesDetalle
+parentesco|0|1|1|es un check, hijo, hijastro, adoptivo, hermano, padre|DEPENDKINDSHIP|tblNovedadesDetalle
+discapacitado|0|4|1||DEPENDHANDICAPP|tblNovedadesDetalle
+
