@@ -15,12 +15,13 @@ namespace FormMaker
         const int vMaxLength = 3;
         const int vComment = 4;
         const int vFieldName = 5;
+        const int vTableName = 6;
 
         const string Numerico = "1";
         const string Texto = "2";
         const string Calendario = "3";
         const string SiNo = "4";
-        const string NumeroPorciento = "6";
+        const string NumericoPorciento = "6";
         const string Titulo = "7";
         const string Seccion = "8";
         const string Error = "10";
@@ -28,6 +29,7 @@ namespace FormMaker
         const string RepeaterInicio = "12";
         const string RepeaterFin = "13";
         const string NumericoAnchoFijo = "14";
+        const string NumericoPesos = "15";
         
         const string Verdadero = "1";
         const string Falso = "0";
@@ -159,6 +161,8 @@ namespace FormMaker
                 {
                     case (Numerico):
                     case (NumericoAnchoFijo):
+                    case (NumericoPesos):
+                    case (NumericoPorciento):
                     case (Texto): // Texto o Numero
                         ControlName = "txt" + NormalizedName;                        
                         sRes += BuildLabel(LabelName, FriendlyName, IsRequired);
@@ -266,6 +270,9 @@ namespace FormMaker
                         sRes += "                   <ItemTemplate>\n";
 
                         ControlList += "        protected Repeater " + ControlName + ";\n";
+
+                        Moisture += "        // Repeating Section Started\n";
+                        Moisture += "        {\n";
                         
                         break;
 
@@ -277,7 +284,10 @@ namespace FormMaker
                         sRes += "               </asp:Repeater>\n";
                         sRes += "           </td>\n";
                         sRes += "       </tr>\n";
-                        
+
+                        Moisture += "        }\n";
+                        Moisture += "        // Repeating Section Ended\n";
+
                         break;
                 }              
 
@@ -368,7 +378,7 @@ namespace FormMaker
                     ClassName = args[1];
                 
                 //Para la version de Sharepoint
-                Output += "<%@ Assembly Name=\"CAFAM.WebPortal.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a01116ae02f25a36\" %>\n";
+                Output += "<%@ Assembly Name=\"CAFAM.WebPortal.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae88e728e51b79b3\" %>\n";
                 Output += "<%@ Page Language=\"C#\" Inherits=\"CAFAM.WebPortal.Forms." + ClassName + "\" Title=\"Formulario\" MasterPageFile=\"~masterurl/default.master\"%>\n";
                 Output += "<%@ Register TagPrefix=\"WebPartPages\" Namespace=\"Microsoft.SharePoint.WebPartPages\" Assembly=\"Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"%>\n";
                 Output += "<%@ Register Tagprefix=\"SharePoint\" Namespace=\"Microsoft.SharePoint.WebControls\" Assembly=\"Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" %>\n";
@@ -432,7 +442,7 @@ namespace FormMaker
                 CsOutput += "               {\n";
                 CsOutput += "                   Moisture();\n";
                 CsOutput += "               }\n\n";
-                CsOutput += Initialization;                
+                CsOutput += Initialization;
                 CsOutput += "            }\n";
                 CsOutput += "            catch (Exception Ex)\n";
                 CsOutput += "            {\n";
