@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div align="center">
+    
         <table class="form_table" style="width: 750px" id="tblFormaDePago" runat="server">  
                 <tr>
                     <td colspan="3" scope="row" class="title-form">
