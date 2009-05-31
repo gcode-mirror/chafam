@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -39,6 +40,8 @@ namespace FormMaker
         static string ClassName = "";
         static string ControlList = "";
         static int LabelIDNumber = 0;
+        static int ValidationGroup = 1;
+        static Hashtable Hash;
         static int GetLabelID ()
         {            
             LabelIDNumber++;
@@ -93,22 +96,16 @@ namespace FormMaker
             Res = ProperCase(Res);
             Res = Res.Replace(" ", "");
 
-            /*Res = Res.Replace("ñ", "n");
-            Res = Res.Replace("á", "a");
-            Res = Res.Replace("é", "e");
-            Res = Res.Replace("í", "i");
-            Res = Res.Replace("ó", "o");
-            Res = Res.Replace("ú", "u");
-            Res = Res.Replace("$", "S");
-            Res = Res.Replace("?", "");
-            Res = Res.Replace("¿", "");
-            Res = Res.Replace("/", "");
-            Res = Res.Replace("*", "");
-            Res = Res.Replace("@", "");
-            Res = Res.Replace("(", "");
-            Res = Res.Replace(")", "");
-            Res = ProperCase(Res);
-            Res = Res.Replace(" ", "");*/
+            string Key = Res;
+            if (Hash.ContainsKey(Key))
+            {
+                Hash[Key] = (int)(Hash[Key]) + 1;
+                Res = Res + Hash[Key].ToString();
+            }
+            else
+            {
+                Hash.Add(Key, 1);
+            }
 
             return Res;
         }
@@ -128,9 +125,9 @@ namespace FormMaker
             sRes += "        <tr>\n";
             sRes += "            <td>\n";
             if (Required)
-                sRes += "                <asp:Label runat=\"server\" ID=" + DQ(LabelName) + " Text=" + DQ(FriendlyName) + Suffix + " CssClass=\"form_label\"/>" + RequiredAsterisk + "\n";
+                sRes += "                <asp:Label runat=\"server\" ID=" + DQ(LabelName) + " Text=" + DQ(FriendlyName + Suffix) + " CssClass=\"form_label\"/>" + RequiredAsterisk + "\n";
             else
-                sRes += "                <asp:Label runat=\"server\" ID=" + DQ(LabelName) + " Text=" + DQ(FriendlyName) + Suffix + " CssClass=\"form_label\"/>\n";
+                sRes += "                <asp:Label runat=\"server\" ID=" + DQ(LabelName) + " Text=" + DQ(FriendlyName + Suffix) + " CssClass=\"form_label\"/>\n";
 
             sRes += "            </td>\n";
             sRes += "        </tr>\n";
@@ -144,19 +141,18 @@ namespace FormMaker
             
             try
             {
-                String[] Vector = Line.Split(',');
+                String[] Vector = Line.Split('|');
 
                 String FriendlyName = ProperCase(Vector[vName]);
                 String NormalizedName = Normalize (Vector[vName]);
                 String LabelName = "lbl" + NormalizedName + "Titulo";                
-                String RequiredName = "req" + NormalizedName;
+                String RequiredName = "rqv" + NormalizedName;
+                String RegexValName = "rev" + NormalizedName;
                 String ControlName = "Dummy" + GetLabelID().ToString();
-                bool IsRequired = Vector[vRequired].Equals(Verdadero);
+                bool IsRequired = Vector[vRequired].Equals(Verdadero) && (Vector[vType] != SiNo);
 
                 if ((Vector.Length >= 5) && (!string.IsNullOrEmpty (Vector[vComment])))
                     sRes += "        <!--" + Vector[vComment] + "-->\n";
-
-                sRes += "        <tr>\n";
 
                 // First Column
                 switch (Vector[vType])
@@ -254,6 +250,9 @@ namespace FormMaker
                         sRes += "<asp:WizardStep ID=" + DQ(ControlName) + " runat=\"server\" StepType=\"auto\" Title=\"\">\n";
                         sRes += "    <TABLE>\n";
 
+                        // Hacer que termine ese validationgrp y empiece uno nuevo
+                        ValidationGroup++;
+
                         break;
 
                     case (RepeaterInicio):                        
@@ -265,7 +264,9 @@ namespace FormMaker
                         sRes += "                       <table border=\"1\" width=\"100%\">\n";
                         sRes += "                   </HeaderTemplate>\n";
                         sRes += "                   <ItemTemplate>\n";
+
                         ControlList += "        protected Repeater " + ControlName + ";\n";
+                        
                         break;
 
                     case (RepeaterFin):
@@ -276,6 +277,7 @@ namespace FormMaker
                         sRes += "               </asp:Repeater>\n";
                         sRes += "           </td>\n";
                         sRes += "       </tr>\n";
+                        
                         break;
                 }              
 
@@ -284,7 +286,7 @@ namespace FormMaker
                     sRes += "        <tr>\n";
                     sRes += "            <td>\n";
                     sRes += "                <asp:RequiredFieldValidator ID=" + DQ(RequiredName) + " runat=\"server\" CssClass=\"form_field_error_message\"\n";
-                    sRes += "                ErrorMessage=\"Requerido\" Display=\"Dynamic\" ControlToValidate=" + DQ(ControlName) + " ValidationGroup=\"grp1\"></asp:RequiredFieldValidator>\n";
+                    sRes += "                ErrorMessage=\"Requerido\" Display=\"Dynamic\" ControlToValidate=" + DQ(ControlName) + " ValidationGroup=" + DQ("grpValidation" + ValidationGroup) + "></asp:RequiredFieldValidator>\n";
                     sRes += "            </td>\n";
                     sRes += "        </tr>\n";
                 }
@@ -292,9 +294,9 @@ namespace FormMaker
                 {
                     sRes += "        <tr>\n";
                     sRes += "            <td>\n";
-                    sRes += "                <asp:RegularExpressionValidator ID=" + DQ(RequiredName) + " runat=\"server\" CssClass=\"form_field_error_message\"\n";
+                    sRes += "                <asp:RegularExpressionValidator ID=" + DQ(RegexValName) + " runat=\"server\" CssClass=\"form_field_error_message\"\n";
                     sRes += "                    ErrorMessage=\"Solo puede ingresar números\" Display=\"Dynamic\" ControlToValidate=" + DQ(ControlName) + "\n";
-                    sRes += "                    ValidationExpression=\"^[\\d]*$\" ValidationGroup=\"grp1\"></asp:RegularExpressionValidator>\n";
+                    sRes += "                    ValidationExpression=\"^[\\d]*$\" ValidationGroup=" + DQ("grpValidation" + ValidationGroup) + "></asp:RegularExpressionValidator>\n";
                     sRes += "            </td>\n";
                     sRes += "        </tr>\n";
                 }
@@ -307,9 +309,9 @@ namespace FormMaker
 
                     sRes += "        <tr>\n";
                     sRes += "            <td>\n";
-                    sRes += "                <asp:RegularExpressionValidator ID=" + DQ(RequiredName) + " runat=\"server\" CssClass=\"form_field_error_message\"\n";
+                    sRes += "                <asp:RegularExpressionValidator ID=" + DQ(RegexValName) + " runat=\"server\" CssClass=\"form_field_error_message\"\n";
                     sRes += "                    ErrorMessage=\"Solo puede ingresar números\" Display=\"Dynamic\" ControlToValidate=" + DQ(ControlName) + "\n";
-                    sRes += "                    ValidationExpression=\"^[0-9{" + ML + "}]*$\" ValidationGroup=\"grp1\"></asp:RegularExpressionValidator>\n";
+                    sRes += "                    ValidationExpression=\"^[0-9{" + ML + "}]*$\" ValidationGroup=" + DQ("grpValidation" + ValidationGroup) + "></asp:RegularExpressionValidator>\n";
                     sRes += "            </td>\n";
                     sRes += "        </tr>\n";
                 }
@@ -317,10 +319,10 @@ namespace FormMaker
                 {
                     sRes += "        <tr>\n";
                     sRes += "            <td>\n";
-                    sRes += "            <asp:RegularExpressionValidator ID=" + DQ(RequiredName) + " runat=\"server\" CssClass=\"form_field_error_message\"\n";
+                    sRes += "            <asp:RegularExpressionValidator ID=" + DQ(RegexValName) + " runat=\"server\" CssClass=\"form_field_error_message\"\n";
                     sRes += "                ErrorMessage=\"El mail no es válido\" Display=\"Dynamic\" ControlToValidate=" + DQ(ControlName) + "\n";
                     sRes += "                ValidationExpression=\"^[_]*([A-Za-z0-9]+(\\.|\\-*_*)?)+@([A-Za-z][A-Za-z0-9\\-]+(\\.|\\-*\\.))+[A-Za-z]{2,6}$\"\n";
-                    sRes += "                ValidationGroup=\"grp1\"></asp:RegularExpressionValidator>\n";                  
+                    sRes += "                ValidationGroup=" + DQ("grpValidation" + ValidationGroup) + "></asp:RegularExpressionValidator>\n";                  
                     sRes += "            </td>\n";
                     sRes += "        </tr>\n";
                 }
@@ -364,11 +366,10 @@ namespace FormMaker
                     ClassName = randObj.Next().ToString();
                 } else
                     ClassName = args[1];
-
-                /*
-                Para la version de Sharepoint
-                Output += "<%@ Assembly Name=\"CAFAM.WebPortal.User, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a01116ae02f25a36\" %>\n";
-                Output += "<%@ Page Language=\"C#\" Inherits=\"CAFAM.WebPortal.User.UserEdit\" Title=\"Edición de Usuario Afiliado\" MasterPageFile=\"~masterurl/default.master\"%>\n";
+                
+                //Para la version de Sharepoint
+                Output += "<%@ Assembly Name=\"CAFAM.WebPortal.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a01116ae02f25a36\" %>\n";
+                Output += "<%@ Page Language=\"C#\" Inherits=\"CAFAM.WebPortal.Forms." + ClassName + "\" Title=\"Formulario\" MasterPageFile=\"~masterurl/default.master\"%>\n";
                 Output += "<%@ Register TagPrefix=\"WebPartPages\" Namespace=\"Microsoft.SharePoint.WebPartPages\" Assembly=\"Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"%>\n";
                 Output += "<%@ Register Tagprefix=\"SharePoint\" Namespace=\"Microsoft.SharePoint.WebControls\" Assembly=\"Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" %>\n";
 
@@ -377,14 +378,13 @@ namespace FormMaker
                 Output += "<script type='text/javascript'>\n";
                 Output += "    _spOriginalFormAction = document.forms[0].action;\n";
                 Output += "    _spSuppressFormOnSubmitWrapper = true;\n";
-                Output += "</script>\n";*/
+                Output += "</script>\n";
 
                 Output += "    <asp:ScriptManager ID=\"scriptMng\" runat=\"server\">\n";
                 Output += "    </asp:ScriptManager>\n";
                 Output += "     <table class=\"ms-formbody\" style=\"width:100%\" id=\"tblMain\" runat=\"server\">\n";
-                
 
-
+                Hash = new Hashtable();
                 foreach (string Line in AllLines)
                 {
                     Output += (ParseLine(Line));                    
@@ -399,7 +399,7 @@ namespace FormMaker
                     Output += "        </tr>\n";
                 }
                 Output += "     </table>\n";
-                //Output += "</asp:Content>\n";
+                Output += "</asp:Content>\n";
 
                 CsOutput += "using System;\n";
                 CsOutput += "using System.Configuration;\n";
@@ -424,7 +424,7 @@ namespace FormMaker
                 CsOutput += "        {\n";
                 CsOutput += "            try\n";
                 CsOutput += "            {\n";
-                CsOutput += "               if (this.isPostBack())\n";
+                CsOutput += "               if (this.IsPostBack())\n";
                 CsOutput += "               {\n";
                 CsOutput += "                   // Do Settings here\n";
                 CsOutput += "               }\n";
