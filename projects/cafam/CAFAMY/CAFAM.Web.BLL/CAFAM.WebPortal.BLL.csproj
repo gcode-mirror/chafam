@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93FF514E-15D9-4ADD-8EDD-F938FCC5FF93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAFAM.WebPortal.BLL</RootNamespace>
+    <AssemblyName>CAFAM.WebPortal.BLL</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>CAFAM.WebPortal.BLL.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressBLL.cs" />
+    <Compile Include="CompensationFundBLL.cs" />
+    <Compile Include="FalseAddressBLL.cs" />
+    <Compile Include="FalseCompanyBLL.cs" />
+    <Compile Include="IdentificationTypeBLL.cs" />
+    <Compile Include="EPSBLL.cs" />
+    <Compile Include="IncomeLevelBLL.cs" />
+    <Compile Include="MaritalStateBLL.cs" />
+    <Compile Include="OccupationBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quotes\Events\AcomodacionBLL.cs" />
+    <Compile Include="Quotes\Events\AlojamientoBLL.cs" />
+    <Compile Include="Quotes\Events\DestinoBLL.cs" />
+    <Compile Include="Quotes\Events\TarifaBLL.cs" />
+    <Compile Include="Quotes\Events\TemporadaBLL.cs" />
+    <Compile Include="Quotes\Events\TipoPlanBLL.cs" />
+    <Compile Include="SecurityQuestionBLL.cs" />
+    <Compile Include="TopicOfInterestBLL.cs" />
+    <Compile Include="UserBLL.cs" />
+    <Compile Include="UserCompanyNewBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CAFAM.Web.DAO\CAFAM.WebPortal.DAO.csproj">
+      <Project>{9C30F37A-01BE-4054-BD0F-0AFC30E8946A}</Project>
+      <Name>CAFAM.WebPortal.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAFAM.WebPortal.AdamHelper\CAFAM.WebPortal.AdamConnection.csproj">
+      <Project>{C603C8CB-7357-4D0B-A869-35B354E026B2}</Project>
+      <Name>CAFAM.WebPortal.AdamConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAFAM.WebPortal.Entities\CAFAM.WebPortal.Entities.csproj">
+      <Project>{1B316149-0883-4AAD-838A-45D29AB42979}</Project>
+      <Name>CAFAM.WebPortal.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAFAM.WebPortal.BLL.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

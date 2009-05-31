@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="49b8c7f8-e36b-497b-8b33-aa95984f8fee"
+          Title="Quotes"
+          Description="CAFAM quotes for different porpouses."
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          ImageUrl="FeatureCafam.gif"
+          Scope="Site"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>    
+  </ElementManifests>
+</Feature>

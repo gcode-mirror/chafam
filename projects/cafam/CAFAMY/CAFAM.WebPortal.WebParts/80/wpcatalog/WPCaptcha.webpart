@@ -1,0 +1,14 @@
+﻿<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Globant.WebParts.WPCaptcha, Globant.WebParts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fcc915e9cc36f64a" />
+      <importErrorMessage>Cannot import WPCaptcha Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">WPCaptcha</property>
+        <property name="Description" type="string">Description for WPCaptcha</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="8C738E5C-8937-4f95-83B4-DF23FE01D52D"
+          Title="Cafam - User Login"
+          Description="This feature contains the user login page"
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          ImageUrl="FeatureCafam.gif"
+          Scope="Site"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

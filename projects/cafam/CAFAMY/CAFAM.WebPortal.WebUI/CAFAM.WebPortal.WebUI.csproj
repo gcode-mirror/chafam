@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{681BEA88-0CFC-437B-AED7-C976C46B1783}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAFAM.WebPortal.WebUI</RootNamespace>
+    <AssemblyName>CAFAM.WebPortal.WebUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>CAFAM.WebPortal.WebUI.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10301.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Documents and Settings\Prueba\Desktop\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressControl.cs" />
+    <Compile Include="CaptchaAPI\CaptchaUtility.cs" />
+    <Compile Include="CaptchaAPI\RandomNumbers.cs" />
+    <Compile Include="CaptchaValidator.cs" />
+    <Compile Include="CaptchaValidatorWebPart.cs" />
+    <Compile Include="TelephoneControl.cs" />
+    <Compile Include="DateTimeCustomControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CAFAM.WebPortal.WebUI.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CAFAM.Web.BLL\CAFAM.WebPortal.BLL.csproj">
+      <Project>{93FF514E-15D9-4ADD-8EDD-F938FCC5FF93}</Project>
+      <Name>CAFAM.WebPortal.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAFAM.WebPortal.Commons\CAFAM.WebPortal.Commons.csproj">
+      <Project>{B8BC6191-D1C3-42C0-BEA9-8406ACEC0F91}</Project>
+      <Name>CAFAM.WebPortal.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAFAM.WebPortal.Entities\CAFAM.WebPortal.Entities.csproj">
+      <Project>{1B316149-0883-4AAD-838A-45D29AB42979}</Project>
+      <Name>CAFAM.WebPortal.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.ApplicationBlocks.Data\Microsoft.ApplicationBlocks.Data.csproj">
+      <Project>{30933672-466E-4F67-A111-ABF267539146}</Project>
+      <Name>Microsoft.ApplicationBlocks.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

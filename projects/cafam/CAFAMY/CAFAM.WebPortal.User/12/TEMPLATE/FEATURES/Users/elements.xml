@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="UserPages" Url="CAFAMPages" RootWebOnly="TRUE" Path="Pages">
+    <File Url="Default.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Hello World"></Property>
+    </File>
+    <File Url="UserEdit.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Edición de Usuario Afiliado"></Property>
+    </File>
+    <File Url="UserNotMemberEdit.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Edición de Usuario No Afiliado"></Property>
+    </File>
+    <File Url="UserCompanyEdit.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Edición de Usuario Empresa"></Property>
+    </File>
+    <File Url="UserNotMemberNew.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Alta de Usuario No Afiliado"></Property>
+    </File>
+    <File Url="UserBeforeNew.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Validación de Datos para Alta de Usuario"></Property>
+    </File>
+    <File Url="UserList.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Listado de Usuarios"></Property>
+    </File>
+    <File Url="SecurityQuestionChange.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Cambio de Pregunta de Seguridad"></Property>
+    </File>
+    <File Url="UserNew.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Alta de Usuario Afiliado"></Property>
+    </File>
+    <File Url="UserCompanyNew.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Alta de Usuario Empresa"></Property>
+    </File>
+    <File Url="UserCompanyNewAdmin.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Alta de Usuario Empresa por Adminitrador"></Property>
+    </File>
+    <File Url="DisplayForm.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Form Show Page"></Property>
+    </File>
+    <File Url="FormServerExt.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Mustra los formularios"></Property>
+    </File>
+    <File Url="PasswordChange.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Cambia la Contraseña"></Property>
+    </File>
+  </Module>
+</Elements> 

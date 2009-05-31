@@ -1,0 +1,145 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02F4B499-050C-427A-AD39-4A0E92D6AB0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cafam.WebPortal.Forms</RootNamespace>
+    <AssemblyName>Cafam.WebPortal.Forms</AssemblyName>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Cafam.WebPortal.Forms.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/Forms/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10301.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Documents and Settings\Prueba\Desktop\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="12\TEMPLATE\FEATURES\Forms\Pages\SuspensionTrabajadores.aspx.cs">
+      <DependentUpon>SuspensionTrabajadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages Code\HelloWorldForms.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12\TEMPLATE\FEATURES\Forms\elements.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\Forms\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\FormStyles.css" />
+    <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\HelloWorldForms.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\SuspensionTrabajadores.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="solutionid.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cafam.WebPortal.Forms.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CAFAM.Web.BLL\CAFAM.WebPortal.BLL.csproj">
+      <Project>{93FF514E-15D9-4ADD-8EDD-F938FCC5FF93}</Project>
+      <Name>CAFAM.WebPortal.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAFAM.Web.DAO\CAFAM.WebPortal.DAO.csproj">
+      <Project>{9C30F37A-01BE-4054-BD0F-0AFC30E8946A}</Project>
+      <Name>CAFAM.WebPortal.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAFAM.WebPortal.Commons\CAFAM.WebPortal.Commons.csproj">
+      <Project>{B8BC6191-D1C3-42C0-BEA9-8406ACEC0F91}</Project>
+      <Name>CAFAM.WebPortal.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAFAM.WebPortal.Entities\CAFAM.WebPortal.Entities.csproj">
+      <Project>{1B316149-0883-4AAD-838A-45D29AB42979}</Project>
+      <Name>CAFAM.WebPortal.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAFAM.WebPortal.WebUI\CAFAM.WebPortal.WebUI.csproj">
+      <Project>{681BEA88-0CFC-437B-AED7-C976C46B1783}</Project>
+      <Name>CAFAM.WebPortal.WebUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.ApplicationBlocks.Data\Microsoft.ApplicationBlocks.Data.csproj">
+      <Project>{30933672-466E-4F67-A111-ABF267539146}</Project>
+      <Name>Microsoft.ApplicationBlocks.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="12\TEMPLATE\IMAGES\" />
+    <Folder Include="12\TEMPLATE\LAYOUTS\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

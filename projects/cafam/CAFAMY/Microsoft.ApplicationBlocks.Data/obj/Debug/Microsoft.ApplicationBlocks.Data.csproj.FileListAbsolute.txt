@@ -1,0 +1,12 @@
+C:\CAFAMX\Microsoft.ApplicationBlocks.Data\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\CAFAMX\Microsoft.ApplicationBlocks.Data\bin\Debug\Microsoft.ApplicationBlocks.Data.pdb
+C:\CAFAMX\Microsoft.ApplicationBlocks.Data\bin\Debug\Microsoft.ApplicationBlocks.Data.xml
+C:\CAFAMX\Microsoft.ApplicationBlocks.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\CAFAMX\Microsoft.ApplicationBlocks.Data\obj\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\CAFAMX\Microsoft.ApplicationBlocks.Data\obj\Debug\Microsoft.ApplicationBlocks.Data.pdb
+C:\dev\csharp\cafam\workspace\projects\cafam\CAFAMY\Microsoft.ApplicationBlocks.Data\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\dev\csharp\cafam\workspace\projects\cafam\CAFAMY\Microsoft.ApplicationBlocks.Data\bin\Debug\Microsoft.ApplicationBlocks.Data.pdb
+C:\dev\csharp\cafam\workspace\projects\cafam\CAFAMY\Microsoft.ApplicationBlocks.Data\bin\Debug\Microsoft.ApplicationBlocks.Data.xml
+C:\dev\csharp\cafam\workspace\projects\cafam\CAFAMY\Microsoft.ApplicationBlocks.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\csharp\cafam\workspace\projects\cafam\CAFAMY\Microsoft.ApplicationBlocks.Data\obj\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\dev\csharp\cafam\workspace\projects\cafam\CAFAMY\Microsoft.ApplicationBlocks.Data\obj\Debug\Microsoft.ApplicationBlocks.Data.pdb
