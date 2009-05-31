@@ -15,3 +15,10 @@ C:\Projects\Challenge\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debu
 C:\Projects\Challenge\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debug\ProtipoWeb.pdb
 C:\Projects\Challenge\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debug\RdlCompile.cache
 C:\Projects\Challenge\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debug\RdlCompile.compiled
+C:\dev\csharp\cafam\workspace\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\bin\ProtipoWeb.dll
+C:\dev\csharp\cafam\workspace\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\bin\ProtipoWeb.pdb
+C:\dev\csharp\cafam\workspace\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\csharp\cafam\workspace\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debug\RdlCompile.cache
+C:\dev\csharp\cafam\workspace\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debug\RdlCompile.compiled
+C:\dev\csharp\cafam\workspace\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debug\ProtipoWeb.dll
+C:\dev\csharp\cafam\workspace\projects\webmock\ProtipoWeb\ProtipoWeb\ProtipoWeb\obj\Debug\ProtipoWeb.pdb
