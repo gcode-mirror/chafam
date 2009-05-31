@@ -3,3 +3,8 @@ C:\Proyectos\FormMaker\FormMaker\FormMaker\bin\Debug\FormMaker.pdb
 C:\Proyectos\FormMaker\FormMaker\FormMaker\obj\Debug\ResolveAssemblyReference.cache
 C:\Proyectos\FormMaker\FormMaker\FormMaker\obj\Debug\FormMaker.exe
 C:\Proyectos\FormMaker\FormMaker\FormMaker\obj\Debug\FormMaker.pdb
+C:\dev\csharp\cafam\workspace\projects\codegen\FormMaker\FormMaker\obj\Debug\FormMaker.exe
+C:\dev\csharp\cafam\workspace\projects\codegen\FormMaker\FormMaker\obj\Debug\FormMaker.pdb
+C:\dev\csharp\cafam\workspace\projects\codegen\FormMaker\FormMaker\bin\Debug\FormMaker.exe
+C:\dev\csharp\cafam\workspace\projects\codegen\FormMaker\FormMaker\bin\Debug\FormMaker.pdb
+C:\dev\csharp\cafam\workspace\projects\codegen\FormMaker\FormMaker\obj\Debug\ResolveAssemblyReference.cache
