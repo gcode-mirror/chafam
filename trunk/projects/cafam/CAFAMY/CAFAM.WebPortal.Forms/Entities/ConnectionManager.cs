@@ -20,57 +20,8 @@ namespace CAFAM.WebPortal.Forms
 
         public static System.Data.SqlClient.SqlConnection getCnn()
         {
-
-            conn = new SqlConnection(stringConection);
-            conn.Open();
-
-            try
-            {
-                if (conn.State == System.Data.ConnectionState.Closed)
-                {
-                    conn.Open();
-                }
-            }
-            catch (System.Exception ex)
-            {
-                ex.Message.ToString();
-            }
-            return conn;
+           return new SqlConnection(stringConection);
         }
 
-        public static void closeCnn()
-        {
-            if (conn != null)
-            {
-                conn.Close();
-            }
-            try
-            {
-                if (conn.State == System.Data.ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-            }
-            catch (System.Exception ex)
-            {
-
-            }
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-            }
-            conn.Close();
-            conn = null;
-        }
     }
 }

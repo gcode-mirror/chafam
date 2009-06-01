@@ -146,12 +146,10 @@ namespace CAFAM.WebPortal.Forms
 		/// Saves a record to the tblFormSuspensionTrabajadoresDetalle table.
 		/// </summary>
 
-        public void Insert()
+        public void Insert(SqlTransaction sqlTran, SqlConnection conn)
         {
-            SqlCommand cmdSQLCommand = new SqlCommand();
-            cmdSQLCommand.CommandText = "[tblFormSuspensionTrabajadoresDetalleInsert]";
+            SqlCommand cmdSQLCommand = new SqlCommand("[tblFormSuspensionTrabajadoresDetalleInsert]", conn, sqlTran);
             cmdSQLCommand.CommandType = CommandType.StoredProcedure;
-            cmdSQLCommand.Connection = ConnectionManager.getCnn();
 
             try
             {
@@ -166,18 +164,12 @@ namespace CAFAM.WebPortal.Forms
                 cmdSQLCommand.Parameters.Add(new SqlParameter("@SuspentionStop", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 10, 0, "", DataRowVersion.Proposed,suspentionStop));
 
                 cmdSQLCommand.ExecuteScalar();
-                //ID = Int32.Parse(cmdSQLCommand.ExecuteScalar().ToString());
             }
             catch (Exception ex)
             {
                 throw new Exception(String.Format("ProyectoDAL::Insertar::Ha ocurrido un Error. Mensaje:{0}", ex.Message), ex);
             }
-            finally
-            {
-                cmdSQLCommand.Dispose();
-            }
         }
-
 		#endregion
 	}
 }
