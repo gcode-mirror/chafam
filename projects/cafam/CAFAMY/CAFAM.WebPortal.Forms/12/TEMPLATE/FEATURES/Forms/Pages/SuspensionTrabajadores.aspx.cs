@@ -59,7 +59,7 @@ namespace CAFAM.WebPortal.Forms
                 }
                 else
                 {
-                    //AutoCompleteUserData();
+                    AutoCompleteUserData();
                     BindData();
                 }
 
@@ -72,14 +72,23 @@ namespace CAFAM.WebPortal.Forms
         private void AutoCompleteUserData()
         {
             SPWeb web = SPContext.Current.Web;
-            BLL.UserBLL userBBL = new CAFAM.WebPortal.BLL.UserBLL(web);
-            Entities.User Usuario = userBBL.GetUser(web.CurrentUser.LoginName);
+            if (web.Url.Equals("http://glb-vm:71"))
+            {
+                txtNit.Text = "123456789";
+                txtSubNit.Text = "2";
+                txtNombreORazonSocial.Text = "Lagarto Juancho";
+            }
+            else
+            {
+                BLL.UserBLL userBBL = new CAFAM.WebPortal.BLL.UserBLL(web);
+                Entities.User Usuario = userBBL.GetUser(web.CurrentUser.LoginName);
 
-            txtNit.Text = Usuario.NIT;
-            txtSubNit.Text = Usuario.SubNIT;
-            txtNombreORazonSocial.Text =
-                Usuario.FirstName + " " + Usuario.SecondName + " " + 
-                Usuario.FirstSurname + " " + Usuario.SecondSurname;
+                txtNit.Text = Usuario.NIT;
+                txtSubNit.Text = Usuario.SubNIT;
+                txtNombreORazonSocial.Text =
+                    Usuario.FirstName + " " + Usuario.SecondName + " " + 
+                    Usuario.FirstSurname + " " + Usuario.SecondSurname;
+            }
         }
 
         private void CreateDateControls()

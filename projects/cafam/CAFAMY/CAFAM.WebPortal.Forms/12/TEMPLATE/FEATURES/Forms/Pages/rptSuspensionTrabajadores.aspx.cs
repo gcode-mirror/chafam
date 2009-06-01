@@ -1,28 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.Reporting.WebForms;
-using CAFAM.WebPortal.DAO;
 using System.Data;
+using System.Configuration;
+//using Microsoft.Sharepoint;
 
 namespace CAFAM.WebPortal.Forms
 {
-    public partial class rptVisualizadorReporte : System.Web.UI.Page
+    public partial class rptSuspensionTrabajadores : System.Web.UI.Page
     {
+        public ReportViewer rptvwrSuspensionTrabajadores;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            EntSuspensionTrabajadores entSuspensionTrabajadores = new EntSuspensionTrabajadores();
             
-            FormAfiliacionEmpresa AfiliacionEmpresa = (FormAfiliacionEmpresa)Session["AfiliacionEmpresa"];
-            IList<FormAfiliacionEmpresa> lstAfiliacionEmpresa = new List<FormAfiliacionEmpresa>();
-            lstAfiliacionEmpresa.Add(AfiliacionEmpresa);
-          
-            ReportDataSource datasource = new ReportDataSource("DataSet1_Empresas", lstAfiliacionEmpresa);
-            rptVisualizadorReport.LocalReport.DataSources.Clear();
-            rptVisualizadorReport.LocalReport.DataSources.Add(datasource);
-            rptVisualizadorReport.LocalReport.Refresh();
+            IList<EntSuspensionTrabajadores> lstSuspensionTrabajadores = new List<EntSuspensionTrabajadores>();
+            lstSuspensionTrabajadores.Add(entSuspensionTrabajadores);
+            
+            ReportDataSource datasource = new ReportDataSource("DataSet_SuspensionTrabajadores", lstSuspensionTrabajadores);
+            
+            using (new Impersonator(WAL.GetEncKey("ImpUserName"), WAL.GetEncKey("ImpDomain"), WAL.GetEncKey("ImpPwd")))
+            {
+                rptvwrSuspensionTrabajadores.LocalReport.ReportPath = ConfigurationSettings.AppSettings["ReportsPath"];
+                rptvwrSuspensionTrabajadores.LocalReport.DataSources.Clear();
+                rptvwrSuspensionTrabajadores.LocalReport.DataSources.Add(datasource);
+                rptvwrSuspensionTrabajadores.LocalReport.Refresh();
+            });
         }
     }
 }
