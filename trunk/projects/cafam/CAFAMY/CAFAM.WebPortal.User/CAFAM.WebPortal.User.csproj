@@ -175,6 +175,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="12\TEMPLATE\FEATURES\Users\Pages\UserEdit.aspx">
+      <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="12\TEMPLATE\FEATURES\Users\Pages\Default.aspx">
       <SubType>ASPXCodeBehind</SubType>
