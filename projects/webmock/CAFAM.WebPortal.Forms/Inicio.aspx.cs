@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -35,6 +34,6 @@ public partial class Inicio : System.Web.UI.Page
         hash["hola"] = 4;
         hash["hola"] = 8;
         int val = (int)hash["hola"];
-        lblDatosGenerales.Text = "Valor: " + val.ToString();
+        //lblDatosGenerales.Text = "Valor: " + val.ToString();
     }
 }
