@@ -1,58 +1,58 @@
-datos del trabajador|0|8|0|||
-nit entidad asociadora|0|1|13|||
-nombre de la entidad asociadora|0|2|0|||
-eps|1|2|0|||
-fondo de pensiones|1|2|0|||
-tipo de identificación|1|2|2|TI, CC, CE||
-número de identificación|1|1|11|||
-primer apellido|1|2|20|||
-segundo apellido|0|2|20|||
-primer nombre|1|2|20|||
-segundo nombre|0|2|20|||
-ingresos mensuales|1|15|9|||
-fecha de nacimiento|1|3|8|AAAAMMDD||
-sexo|1|2|1|M/F||
-estado civil |1|1|1|1 Soltero, 2 Casado, 3 Viudo, 4 Separado, 5 Unión Libre||
-dirección actual|1|2|20|formato de direcciones||
-estrato|1|2|10|||
-barrio|1|2|20|||
-ciudad|1|2|20|||
-teléfono 1|1|1|10|||
-teléfono 2|0|1|10|||
-correo electrónico|1|2|60|formato de correo electrónico||
-estudios realizados|1|1|1| 1=Primarios, 2=Secundarios, 3=Profesionales, 4=Post Grado, 5=ninguno, 6=Otros||
-título otorgado|0|2|20|||
-datos del cónyuge o compañero  si va a ingresar cónyuge los datos son obligatorios|0|8|0|||
-tipo de identificación|1|2|2|TI, CC, CE||
-número de identificación|1|1|11|||
-primer apellido|1|2|20|||
-segundo apellido|0|2|20|||
-primer nombre|1|2|20|||
-segundo nombre|0|2|20|||
-conviven|1|2|1|si/no||
-fecha de nacimiento|1|3|8|AAAAMMDD||
-sexo|1|2|1|M/F||
-dirección actual|1|2|20|formato de direcciones, autocompletar si conviven = si||
-estrato|1|2|10|autocompletar si conviven = si||
-barrio|1|2|20|autocompletar si conviven = si||
-ciudad|1|2|20|autocompletar si conviven = si||
-teléfono|1|1|10|autocompletar si conviven = si||
-ocupación actual|1|1|1| 1= Hogar, 2=Empleado, 3=Independiente, 4= Pensión||
-nombre de la empresa donde labora|1|2|20|obligatorio si Ocupación Actual = 2||
-nit|1|1|13|obligatorio si Ocupación Actual = 2||
-recibe subsidio? |1|4|1|obligatorio si Ocupación Actual = 2 ||
-sueldo mensual|1|15|9|obligatorio si Ocupación Actual = 2 ||
-teléfono|1|1|10|obligatorio si Ocupación Actual = 2 ||
-tipo de contrato|1|2|15|obligatorio si Ocupación Actual = 2 ||
-tipo de vinculación |1|1|1|1= Cónyuge, 2= Compañero||
-datos de las personas a cargo |0|8|0|||
-cantidad de personas a cargo|1|1|2|habilita la cantidad de campos necesarios para cargar las personas a cargo||
-n° identificación|1|1|11|||
-primer apellido|1|2|20|||
-segundo apellido|0|2|20|||
-primer nombre|1|2|20|||
-segundo nombre|0|2|20|||
-sexo|1|2|1|M/F||
-fecha de nacimiento|1|3|8|AAAAMMDD||
-parentesco |1|1|1|1 Hijo, 3 Hijastro, 4 Hermano, 5 Padre, 9 Adoptivo||
-observaciones|0|2|40|||
+datos del trabajador|0|8|0||datos del trabajador|
+nit entidad asociadora|0|1|13||nit entidad asociadora|
+nombre de la entidad asociadora|0|2|0||nombre de la entidad asociadora|
+eps|1|2|0||eps|
+fondo de pensiones|1|2|0||fondo de pensiones|
+tipo de identificación|1|2|2|TI, CC, CE|tipo de identificación|
+número de identificación|1|1|11||número de identificación|
+primer apellido|1|2|20||primer apellido|
+segundo apellido|0|2|20||segundo apellido|
+primer nombre|1|2|20||primer nombre|
+segundo nombre|0|2|20||segundo nombre|
+ingresos mensuales|1|15|9||ingresos mensuales|
+fecha de nacimiento|1|3|8|AAAAMMDD|fecha de nacimiento|
+sexo|1|2|1|M/F|sexo|
+estado civil |1|1|1|1 Soltero, 2 Casado, 3 Viudo, 4 Separado, 5 Unión Libre|estado civil |
+dirección actual|1|2|20|formato de direcciones|dirección actual|
+estrato|1|2|10||estrato|
+barrio|1|2|20||barrio|
+ciudad|1|2|20||ciudad|
+teléfono 1|1|1|10||teléfono 1|
+teléfono 2|0|1|10||teléfono 2|
+correo electrónico|1|2|60|formato de correo electrónico|correo electrónico|
+estudios realizados|1|1|1| 1=Primarios, 2=Secundarios, 3=Profesionales, 4=Post Grado, 5=ninguno, 6=Otros|estudios realizados|
+título otorgado|0|2|20||título otorgado|
+datos del cónyuge o compañero  si va a ingresar cónyuge los datos son obligatorios|0|8|0||datos del cónyuge o compañero  si va a ingresar cónyuge los datos son obligatorios|
+tipo de identificación|1|2|2|TI, CC, CE|tipo de identificación|
+número de identificación|1|1|11||número de identificación|
+primer apellido|1|2|20||primer apellido|
+segundo apellido|0|2|20||segundo apellido|
+primer nombre|1|2|20||primer nombre|
+segundo nombre|0|2|20||segundo nombre|
+conviven|1|2|1|si/no|conviven|
+fecha de nacimiento|1|3|8|AAAAMMDD|fecha de nacimiento|
+sexo|1|2|1|M/F|sexo|
+dirección actual|1|2|20|formato de direcciones, autocompletar si conviven = si|dirección actual|
+estrato|1|2|10|autocompletar si conviven = si|estrato|
+barrio|1|2|20|autocompletar si conviven = si|barrio|
+ciudad|1|2|20|autocompletar si conviven = si|ciudad|
+teléfono|1|1|10|autocompletar si conviven = si|teléfono|
+ocupación actual|1|1|1| 1= Hogar, 2=Empleado, 3=Independiente, 4= Pensión|ocupación actual|
+nombre de la empresa donde labora|1|2|20|obligatorio si Ocupación Actual = 2|nombre de la empresa donde labora|
+nit|1|1|13|obligatorio si Ocupación Actual = 2|nit|
+recibe subsidio? |1|4|1|obligatorio si Ocupación Actual = 2 |recibe subsidio? |
+sueldo mensual|1|15|9|obligatorio si Ocupación Actual = 2 |sueldo mensual|
+teléfono|1|1|10|obligatorio si Ocupación Actual = 2 |teléfono|
+tipo de contrato|1|2|15|obligatorio si Ocupación Actual = 2 |tipo de contrato|
+tipo de vinculación |1|1|1|1= Cónyuge, 2= Compañero|tipo de vinculación |
+datos de las personas a cargo |0|8|0||datos de las personas a cargo |
+cantidad de personas a cargo|1|1|2|habilita la cantidad de campos necesarios para cargar las personas a cargo|cantidad de personas a cargo|
+n° identificación|1|1|11||n° identificación|
+primer apellido|1|2|20||primer apellido|
+segundo apellido|0|2|20||segundo apellido|
+primer nombre|1|2|20||primer nombre|
+segundo nombre|0|2|20||segundo nombre|
+sexo|1|2|1|M/F|sexo|
+fecha de nacimiento|1|3|8|AAAAMMDD|fecha de nacimiento|
+parentesco |1|1|1|1 Hijo, 3 Hijastro, 4 Hermano, 5 Padre, 9 Adoptivo|parentesco |
+observaciones|0|2|40||observaciones|
