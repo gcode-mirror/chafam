@@ -6,6 +6,8 @@ using System.Web.UI.WebControls;
 using Microsoft.Reporting.WebForms;
 
 using System.Data;
+using CAFAM.WebPortal.Commons;
+using System.Configuration;
 
 namespace CAFAM.WebPortal.Forms
 {
@@ -20,9 +22,13 @@ namespace CAFAM.WebPortal.Forms
             DataSet thisDataSet = RecolectarDatos(AfiliacionEmpresa);
             ReportDataSource datasource = new ReportDataSource("DataSet1_Empresas", thisDataSet.Tables[0]);
 
-            rptVisualizadorReport.LocalReport.DataSources.Add(datasource);
-            rptVisualizadorReport.DataBind();
-            rptVisualizadorReport.LocalReport.Refresh();
+            using (new Impersonator(WAL.GetEncKey("ImpUserName"), WAL.GetEncKey("ImpDomain"), WAL.GetEncKey("ImpPwd")))
+            {
+                rptVisualizadorReport.LocalReport.ReportPath = ConfigurationSettings.AppSettings["ReportsPath"] + "\\rptAfiliacionEmpresas.rdlc";
+                rptVisualizadorReport.LocalReport.DataSources.Add(datasource);
+                rptVisualizadorReport.DataBind();
+                rptVisualizadorReport.LocalReport.Refresh();
+            }
         }
 
         protected DataSet RecolectarDatos(EntAfiliacionEmpresa AfiliacionEmpresa)

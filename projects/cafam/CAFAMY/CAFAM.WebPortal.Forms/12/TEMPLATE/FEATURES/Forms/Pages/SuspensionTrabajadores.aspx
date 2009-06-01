@@ -1,5 +1,5 @@
 <%@ Assembly Name="CAFAM.WebPortal.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae88e728e51b79b3" %>
-<%@ Page Language="C#" Inherits="CAFAM.WebPortal.Forms.SuspensionTrabajadores" Title="Formulario" MasterPageFile="~masterurl/default.master"%>
+<%@ Page Language="C#" Inherits="CAFAM.WebPortal.Forms.SuspensionTrabajadores" Title="Formulario" MasterPageFile="~masterurl/default.master" EnableSessionState="True" %>
 <%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
 <%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Register Assembly="AjaxControlToolkit, Version=1.0.10301.0, Culture=Neutral, PublicKeyToken=28f01b0e84b6d53e"
@@ -24,7 +24,7 @@
                 <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                         <td>
-                            <asp:Label runat="server" ID="lblNitTitulo" Text="Nit" CssClass="form_label"/><span class="form_label">&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)</span>
+                            <asp:Label runat="server" ID="lblNitTitulo" Text="Nit" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)</span>
                         </td>
                         <td>
                             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -67,7 +67,7 @@
         <!--se autocompleta (en el sistema de subsidios tiene longitud 60)-->
         <tr>
             <td>
-                <asp:Label runat="server" ID="lblNombreORazonSocialTitulo" Text="Nombre o Razón Social" CssClass="form_label"/><span class="form_label">&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)</span>
+                <asp:Label runat="server" ID="lblNombreORazonSocialTitulo" Text="Nombre o Razón Social" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)</span>
             </td>
         </tr>
         <tr>
@@ -133,7 +133,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label runat="server" ID="lblTipoDeIdentificacionTitulo" Text="Tipo" CssClass="form_label"/><span class="form_label">&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                            <asp:Label runat="server" ID="lblTipoDeIdentificacionTitulo" Text="Tipo" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
                         </td>
                         <td>
                             <%--<asp:TextBox runat="server" ID="txtTipoDeIdentificacion" CssClass="form_text" MaxLength="1"/>--%>
@@ -143,7 +143,7 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
-                            <asp:Label runat="server" ID="lblNumeroDeIdentificacionTitulo" Text="Numero De Identificación" CssClass="form_label"/><span class="form_label">&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                            <asp:Label runat="server" ID="lblNumeroDeIdentificacionTitulo" Text="Numero De Identificación" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
                         </td>
                         <td>
                             <asp:TextBox runat="server" ID="txtNumeroDeIdentificacion" CssClass="form_text" MaxLength="11"/>
@@ -204,7 +204,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label runat="server" ID="lblPrimerApellidoTitulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                            <asp:Label runat="server" ID="lblPrimerApellidoTitulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
                         </td>
                         <td>
                             <asp:TextBox runat="server" ID="txtPrimerApellido" CssClass="form_text" MaxLength="20"/>
@@ -241,7 +241,7 @@
                     </tr>                
                     <tr>
                         <td>
-                            <asp:Label runat="server" ID="lblPrimerNombreTitulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                            <asp:Label runat="server" ID="lblPrimerNombreTitulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
                         </td>
                         <td>
                             <asp:TextBox runat="server" ID="txtPrimerNombre" CssClass="form_text" MaxLength="20"/>
@@ -273,13 +273,13 @@
                 <table border="0" cellpadding="0" cellspacing="0">
                     <tr>
                         <td>
-                            <asp:Label runat="server" ID="lblFechaDeLaSuspensionInicialTitulo" Text="Inicio (dd/mm/aaaa)" CssClass="form_label"/><span class="form_label">&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)</span>
+                            <asp:Label runat="server" ID="lblFechaDeLaSuspensionInicialTitulo" Text="Inicio (dd/mm/aaaa)" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)</span>
                         </td>
                         <td>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
-                            <asp:Label runat="server" ID="lblFechaDeLaSuspensionFinalTitulo" Text="Fin (dd/mm/aaaa)" CssClass="form_label"/><span class="form_label">&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)</span>
+                            <asp:Label runat="server" ID="lblFechaDeLaSuspensionFinalTitulo" Text="Fin (dd/mm/aaaa)" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)</span>
                         </td>
                     </tr>
                     <tr>
