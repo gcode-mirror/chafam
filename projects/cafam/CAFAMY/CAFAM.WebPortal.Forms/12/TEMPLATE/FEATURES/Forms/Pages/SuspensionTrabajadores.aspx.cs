@@ -19,7 +19,6 @@ namespace CAFAM.WebPortal.Forms
         protected TextBox txtNit;
         protected TextBox txtSubNit;
         protected TextBox txtNombreORazonSocial;
-        protected TextBox txtTipoDeIdentificacion;
         protected RadioButtonList rdTipoDeIdentificacion;
         protected TextBox txtNumeroDeIdentificacion;
         protected TextBox txtPrimerApellido;
@@ -31,8 +30,11 @@ namespace CAFAM.WebPortal.Forms
         protected GridView gvTrabajadores;
         protected DateTimeCustomControl dtFechaDeLaSuspensionInicial;
         protected DateTimeCustomControl dtFechaDeLaSuspensionFinal;
+        protected Label lblMessage;
 
         #endregion
+
+        private EntSuspensionTrabajadores entSusTrabajador;
         
         public List<Trabajador> lstTrabajadores
         {
@@ -49,46 +51,85 @@ namespace CAFAM.WebPortal.Forms
         protected void Page_Load(object sender, EventArgs e)
         {
             try
-            {                
+            {
+                CreateDateControls();
                 if (this.IsPostBack)
                 {
-                   // Do Settings here
+                    // Do Something
                 }
                 else
                 {
+                    //AutoCompleteUserData();
                     BindData();
-                    Moisture();
                 }
 
-                dtFechaDeLaSuspensionInicial = new DateTimeCustomControl();
-                dtFechaDeLaSuspensionInicial.AjaxFunctionality = false;
-                dtFechaDeLaSuspensionInicial.TextBoxCSSClass = "form_text";
-                dtFechaDeLaSuspensionInicial.ValidatorsCSSClass = "form_field_error_message";
-                pnldtFechaDeLaSuspensionInicial.Controls.Add(dtFechaDeLaSuspensionInicial);
-
-                dtFechaDeLaSuspensionFinal = new DateTimeCustomControl();
-                dtFechaDeLaSuspensionFinal.AjaxFunctionality = false;
-                dtFechaDeLaSuspensionFinal.TextBoxCSSClass = "form_text";
-                dtFechaDeLaSuspensionFinal.ValidatorsCSSClass = "form_field_error_message";
-                pnldtFechaDeLaSuspensionFinal.Controls.Add(dtFechaDeLaSuspensionFinal);
             }
             catch (Exception Ex)
             {
             }
         }
 
+        private void AutoCompleteUserData()
+        {
+            SPWeb web = SPContext.Current.Web;
+            BLL.UserBLL userBBL = new CAFAM.WebPortal.BLL.UserBLL(web);
+            Entities.User Usuario = userBBL.GetUser(web.CurrentUser.LoginName);
+
+            txtNit.Text = Usuario.NIT;
+            txtSubNit.Text = Usuario.SubNIT;
+            txtNombreORazonSocial.Text =
+                Usuario.FirstName + " " + Usuario.SecondName + " " + 
+                Usuario.FirstSurname + " " + Usuario.SecondSurname;
+        }
+
+        private void CreateDateControls()
+        {
+            dtFechaDeLaSuspensionInicial = new DateTimeCustomControl();
+            dtFechaDeLaSuspensionInicial.AjaxFunctionality = false;
+            dtFechaDeLaSuspensionInicial.TextBoxCSSClass = "form_text";
+            dtFechaDeLaSuspensionInicial.ValidatorsCSSClass = "form_field_error_message";
+            dtFechaDeLaSuspensionInicial.Required = true;
+            pnldtFechaDeLaSuspensionInicial.Controls.Add(dtFechaDeLaSuspensionInicial);
+
+            dtFechaDeLaSuspensionFinal = new DateTimeCustomControl();
+            dtFechaDeLaSuspensionFinal.AjaxFunctionality = false;
+            dtFechaDeLaSuspensionFinal.TextBoxCSSClass = "form_text";
+            dtFechaDeLaSuspensionFinal.ValidatorsCSSClass = "form_field_error_message";
+            dtFechaDeLaSuspensionFinal.Required = true;
+            pnldtFechaDeLaSuspensionFinal.Controls.Add(dtFechaDeLaSuspensionFinal);
+        }
+
         protected void bntGuardarEImprimir_Click(object sender, EventArgs e)
         {
             try
             {
+                if (this.lstTrabajadores.Count == 0)
+                {
+                    lblMessage.Text = "Debe cargar al menos un trabajador";
+                    return;
+                }
+
+                // Form to Entity
                 Moisture();
 
-                // Save
-
-                // Call print view
+                // Commit Form to DB or Sharepoint
+                CommitForm();
             }
             catch (Exception Ex)
             {
+                lblMessage.Text = "Error: " + Ex.Message;
+            }
+        }
+
+        private void CommitForm()
+        {
+            try
+            {
+                entSusTrabajador.Insert();
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
             }
         }
 
@@ -111,15 +152,45 @@ namespace CAFAM.WebPortal.Forms
                 List<Trabajador> Lst = lstTrabajadores;
                 Lst.Add(myTrabajador);
                 this.gvTrabajadores.DataSource = Lst;
-                this.gvTrabajadores.DataBind();
                 this.ViewState["lstTrabajadores"] = Lst;
+                this.gvTrabajadores.DataBind();
             }
         }
 
         private void Moisture()
         {
-            //throw new NotImplementedException();
+            try
+            {
+                entSusTrabajador = new EntSuspensionTrabajadores();
+
+                entSusTrabajador.NIT = txtNit.Text;
+                entSusTrabajador.SUBNIT = txtSubNit.Text;
+                entSusTrabajador.RazonSocial = txtNombreORazonSocial.Text;
+                entSusTrabajador.DateIns = DateTime.Now;
+                entSusTrabajador.CurrentUser = "";
+
+                foreach (Trabajador Tr in lstTrabajadores)
+                {
+                    EntSuspensionTrabajadoresDetalle entSusTrabDetalle = new EntSuspensionTrabajadoresDetalle();
+                    entSusTrabDetalle.IdType = Tr.TipoId;
+                    entSusTrabDetalle.IdNumber = Tr.NumeroId;
+                    entSusTrabDetalle.FirstSurname = Tr.PrimerApellido;
+                    entSusTrabDetalle.SecondSurname = Tr.SegundoApellido;
+                    entSusTrabDetalle.FirstName = Tr.PrimerNombre;
+                    entSusTrabDetalle.SecondName = Tr.SegundoNombre;
+                    entSusTrabDetalle.SuspentionStart = Tr.InicioSuspension.ToString();
+                    entSusTrabDetalle.SuspentionStop = Tr.FinSuspension.ToString();
+
+                    entSusTrabajador.TrabajadoresDetalle.Add(entSusTrabDetalle);
+                }                
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
         }
+
+        
 
         private void BindData()
         {
