@@ -114,6 +114,10 @@ namespace CAFAM.WebPortal.Forms
 
                 // Commit Form to DB or Sharepoint
                 CommitForm();
+
+                // Go to PrintView
+                Response.Redirect("rptSuspensionTrabajadores.aspx");
+                
             }
             catch (Exception Ex)
             {
