@@ -64,6 +64,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="12\TEMPLATE\FEATURES\Forms\Pages\AfiliacionEmpresas.aspx.cs">
+      <DependentUpon>AfiliacionEmpresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="12\TEMPLATE\FEATURES\Forms\Pages\rptAfiliacionEmpresas.aspx.cs">
+      <DependentUpon>rptAfiliacionEmpresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="12\TEMPLATE\FEATURES\Forms\Pages\rptSuspensionTrabajadores.aspx.cs">
       <DependentUpon>rptSuspensionTrabajadores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -75,12 +83,19 @@
     <Compile Include="Entities\ConnectionManager.cs" />
     <Compile Include="Entities\EntSuspensionTrabajadores.cs" />
     <Compile Include="Entities\EntSuspensionTrabajadoresDetalle.cs" />
+    <Compile Include="Entities\EntAfiliacionEmpresa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="12\TEMPLATE\FEATURES\Forms\elements.xml" />
     <Content Include="12\TEMPLATE\FEATURES\Forms\feature.xml" />
+    <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\AfiliacionEmpresas.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\FormStyles.css" />
+    <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\rptAfiliacionEmpresas.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\rptSuspensionTrabajadores.aspx">
     </Content>
     <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\SuspensionTrabajadores.aspx">
@@ -135,6 +150,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="12\TEMPLATE\LAYOUTS\rptAfiliacionEmpresas.rdlc" />
     <EmbeddedResource Include="12\TEMPLATE\LAYOUTS\rptSuspensionTrabajadores.rdlc" />
   </ItemGroup>
   <ItemGroup>
