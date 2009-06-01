@@ -106,40 +106,39 @@ namespace CAFAM.WebPortal.Forms
 		
 		#region Methods
 
-        public void Insert()
+    public void Insert()
+    {
+        using (SqlConnection conn = DAO.ConnectionManager.getCnn())
         {
-            SqlCommand cmdSQLCommand = new SqlCommand();
-            cmdSQLCommand.CommandText = "[tblSuspensionTrabajadoresInsert]";
-            cmdSQLCommand.CommandType = CommandType.StoredProcedure;
-            cmdSQLCommand.Connection = ConnectionManager.getCnn();
-            
             try
             {
-                //TODO: inicio transac
-                cmdSQLCommand.Parameters.Add(new SqlParameter("@CurrentUser", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 10, 0, "", DataRowVersion.Proposed, currentUser));
-                cmdSQLCommand.Parameters.Add(new SqlParameter("@DateIns", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 0, 0, "", DataRowVersion.Proposed, dateIns));
-                cmdSQLCommand.Parameters.Add(new SqlParameter("@NIT", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 0, 0, "", DataRowVersion.Proposed, nIT));
-                cmdSQLCommand.Parameters.Add(new SqlParameter("@SUBNIT", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 0, 0, "", DataRowVersion.Proposed, sUBNIT));
-                cmdSQLCommand.Parameters.Add(new SqlParameter("@RazonSocial", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 0, 0, "", DataRowVersion.Proposed, razonSocial));
+                conn.Open();
 
-                Id = Int32.Parse(cmdSQLCommand.ExecuteScalar().ToString());
-
-                foreach (EntSuspensionTrabajadoresDetalle Tr in TrabajadoresDetalle)
+                using (SqlTransaction sqlTran = conn.BeginTransaction())
                 {
-                    Tr.IDSusp = Id;
-                    Tr.Insert();
-                }
+                    SqlCommand cmdSQLCommand = new SqlCommand("[tblSuspensionTrabajadoresInsert]", conn, sqlTran);
+                    cmdSQLCommand.CommandType = CommandType.StoredProcedure;
+                
+                    cmdSQLCommand.Parameters.Add(new SqlParameter("@CurrentUser", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 10, 0, "", DataRowVersion.Proposed, currentUser));
+                    cmdSQLCommand.Parameters.Add(new SqlParameter("@DateIns", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 0, 0, "", DataRowVersion.Proposed, dateIns));
+                    cmdSQLCommand.Parameters.Add(new SqlParameter("@NIT", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 0, 0, "", DataRowVersion.Proposed, nIT));
+                    cmdSQLCommand.Parameters.Add(new SqlParameter("@SUBNIT", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 0, 0, "", DataRowVersion.Proposed, sUBNIT));
+                    cmdSQLCommand.Parameters.Add(new SqlParameter("@RazonSocial", SqlDbType.VarChar, 100, ParameterDirection.Input, true, 0, 0, "", DataRowVersion.Proposed, razonSocial));
 
-                //Commit Transac
+                    Id = Int32.Parse(cmdSQLCommand.ExecuteScalar().ToString());
+                    this.TrabajadoresDetalle = new List<EntSuspensionTrabajadoresDetalle>();
+
+                    foreach (EntSuspensionTrabajadoresDetalle Tr in TrabajadoresDetalle)
+                    {
+                        Tr.IDSusp = Id;
+                        Tr.Insert(sqlTran, conn);
+                    }
+                    sqlTran.Commit();
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception(String.Format("ProyectoDAL::Insertar::Ha ocurrido un Error. Mensaje:{0}", ex.Message), ex);
-                //rollback transac
-            }
-            finally
-            {
-                cmdSQLCommand.Dispose();
             }
         }
 			
