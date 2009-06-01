@@ -56,6 +56,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Documents and Settings\Prueba\Desktop\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -80,10 +81,8 @@
     <Content Include="12\TEMPLATE\FEATURES\Forms\elements.xml" />
     <Content Include="12\TEMPLATE\FEATURES\Forms\feature.xml" />
     <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\FormStyles.css" />
-    <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\HelloWorldForms.aspx">
-      <SubType>ASPXCodeBehind</SubType>
+    <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\rptSuspensionTrabajadores.aspx">
     </Content>
-    <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\rptSuspensionTrabajadores.aspx" />
     <Content Include="12\TEMPLATE\FEATURES\Forms\Pages\SuspensionTrabajadores.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
