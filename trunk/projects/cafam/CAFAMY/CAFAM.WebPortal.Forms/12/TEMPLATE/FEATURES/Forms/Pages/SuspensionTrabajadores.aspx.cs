@@ -125,8 +125,7 @@ namespace CAFAM.WebPortal.Forms
                 CommitForm();
 
                 // Go to PrintView
-                Response.Redirect("rptSuspensionTrabajadores.aspx");
-                
+                Response.Redirect("rptSuspensionTrabajadores.aspx");                
             }
             catch (Exception Ex)
             {

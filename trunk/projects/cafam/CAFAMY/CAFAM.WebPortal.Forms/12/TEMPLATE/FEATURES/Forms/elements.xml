@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="UserPages" Url="CAFAMPages" RootWebOnly="TRUE" Path="Pages">
-    <!--<File Url="HelloWorldForms.aspx" Type="GhostableInLibrary">
-      <Property Name="Title" Value="Hello World"></Property>
-    </File>-->
     <File Url="SuspensionTrabajadores.aspx" Type="GhostableInLibrary">
       <Property Name="Title" Value="Formulario de Suspensión de Trabajadores"></Property>
     </File>
     <File Url="rptSuspensionTrabajadores.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Impresión de Suspensión de Trabajadores"></Property>
+    </File>
+    <File Url="AfiliacionEmpresas.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Formulario de Suspensión de Trabajadores"></Property>
+    </File>
+    <File Url="rptAfiliacionEmpresas.aspx" Type="GhostableInLibrary">
       <Property Name="Title" Value="Impresión de Suspensión de Trabajadores"></Property>
     </File>
   </Module>
