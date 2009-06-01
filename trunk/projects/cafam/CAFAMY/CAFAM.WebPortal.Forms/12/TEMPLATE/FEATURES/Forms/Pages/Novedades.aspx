@@ -1,7 +1,16 @@
-<%@ Page Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Novedades.aspx.cs" Inherits="Novedades" Title="Untitled Page" %>
+<%--<%@ Page Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="Novedades.aspx.cs" Inherits="Novedades" Title="Untitled Page" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+--%>
+<%@ Assembly Name="CAFAM.WebPortal.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae88e728e51b79b3" %>
+<%@ Page Language="C#" Inherits="CAFAM.WebPortal.Forms.Novedades" Title="Formulario" MasterPageFile="~masterurl/default.master" EnableSessionState="True" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Assembly="AjaxControlToolkit, Version=1.0.10301.0, Culture=Neutral, PublicKeyToken=28f01b0e84b6d53e"
+    Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
-pan
+<asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server" ID="MainContent">
+<link rel="Stylesheet" href="~/_layouts/StyleSheet.css" type="text/css" />
+
 <script type='text/javascript'>
     _spOriginalFormAction = document.forms[0].action;
     _spSuppressFormOnSubmitWrapper = true;
@@ -1188,7 +1197,7 @@ pan
                             <tr>
                                 <td>
                                     <asp:RegularExpressionValidator ID="revTipoDeIdentificacion4" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="rdlIdentificacionPariente"
+                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="rdlIdentificacionTrabajador"
                                         ValidationExpression="^[\d]*$"></asp:RegularExpressionValidator>
                                 </td>
                             </tr>
