@@ -1,0 +1,155 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C7BE2E3-D80B-43B6-8F6A-1913A93BADBA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAFAM.WebPortal.Forms</RootNamespace>
+    <AssemblyName>CAFAM.WebPortal.Forms</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10301.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Proyectos\Cafam\CAFAM.WebPortal\Cafam.WebPortal.Empresas\bin\Debug\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AfiliacionIndividuales.aspx.cs">
+      <DependentUpon>AfiliacionIndividuales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DAO\ConnectionManager.cs" />
+    <Compile Include="DAO\FormAfiliacionEmpresa.cs" />
+    <Compile Include="DAO\FormNovedadesDetalle.cs" />
+    <Compile Include="DAO\FormNovedadesTrabajador.cs" />
+    <Compile Include="DAO\FormSuspensionTrabajadore.cs" />
+    <Compile Include="DAO\FormSuspensionTrabajadoresDetalle.cs" />
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListBinder.cs" />
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Novedades.aspx.cs">
+      <DependentUpon>Novedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AfiliacionIndividuales.aspx" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="Novedades.aspx" />
+    <Content Include="StyleSheet.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReportTest.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\blank.gif" />
+    <Content Include="assets\calendar.gif" />
+    <Content Include="assets\core.css" />
+    <Content Include="assets\core.js" />
+    <Content Include="assets\gosearch.gif" />
+    <Content Include="assets\helpicon.gif" />
+    <Content Include="assets\ie55up.js" />
+    <Content Include="assets\init.js" />
+    <Content Include="assets\menudark.gif" />
+    <Content Include="assets\portal.js" />
+    <Content Include="assets\recycbin.gif" />
+    <Content Include="assets\search.js" />
+    <Content Include="assets\StyleSheet.css" />
+    <Content Include="assets\StyleSheet2.css" />
+    <Content Include="assets\Stylesheet3.css" />
+    <Content Include="assets\titlegraphic.gif" />
+    <Content Include="assets\whitearrow.gif" />
+    <Content Include="Stylesheet1.css" />
+    <Content Include="StyleSheet2.css" />
+    <Content Include="StyleSheet3.css" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\ScriptResource%281%29.axd" />
+    <None Include="assets\ScriptResource%282%29.axd" />
+    <None Include="assets\ScriptResource%283%29.axd" />
+    <None Include="assets\ScriptResource.axd" />
+    <None Include="assets\WebResource.axd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\cafam\CAFAMY\CAFAM.Web.BLL\CAFAM.WebPortal.BLL.csproj">
+      <Project>{93FF514E-15D9-4ADD-8EDD-F938FCC5FF93}</Project>
+      <Name>CAFAM.WebPortal.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\cafam\CAFAMY\CAFAM.WebPortal.WebUI\CAFAM.WebPortal.WebUI.csproj">
+      <Project>{681BEA88-0CFC-437B-AED7-C976C46B1783}</Project>
+      <Name>CAFAM.WebPortal.WebUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_LocalResources\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1126</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

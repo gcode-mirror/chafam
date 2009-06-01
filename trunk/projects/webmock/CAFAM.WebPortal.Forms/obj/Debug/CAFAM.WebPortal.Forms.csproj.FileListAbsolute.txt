@@ -1,0 +1,7 @@
+C:\dev\csharp\cafam\workspace\projects\webmock\CAFAM.WebPortal.Forms\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\csharp\cafam\workspace\projects\webmock\CAFAM.WebPortal.Forms\obj\Debug\RdlCompile.cache
+C:\dev\csharp\cafam\workspace\projects\webmock\CAFAM.WebPortal.Forms\obj\Debug\RdlCompile.compiled
+C:\dev\csharp\cafam\workspace\projects\webmock\CAFAM.WebPortal.Forms\bin\CAFAM.WebPortal.Forms.dll
+C:\dev\csharp\cafam\workspace\projects\webmock\CAFAM.WebPortal.Forms\bin\CAFAM.WebPortal.Forms.pdb
+C:\dev\csharp\cafam\workspace\projects\webmock\CAFAM.WebPortal.Forms\obj\Debug\CAFAM.WebPortal.Forms.dll
+C:\dev\csharp\cafam\workspace\projects\webmock\CAFAM.WebPortal.Forms\obj\Debug\CAFAM.WebPortal.Forms.pdb
