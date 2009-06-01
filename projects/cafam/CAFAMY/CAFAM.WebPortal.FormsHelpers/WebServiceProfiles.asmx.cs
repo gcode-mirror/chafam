@@ -23,7 +23,7 @@ namespace CAFAM.WebPortal.FormsHelpers
     // [System.Web.Script.Services.ScriptService]
     public class WebServiceProfiles : System.Web.Services.WebService
     {
-      [WebMethod]
+        [WebMethod]
         public Entities.User GetProfile(string profile)
         {
             Entities.User entitiesUser = new Entities.User();
