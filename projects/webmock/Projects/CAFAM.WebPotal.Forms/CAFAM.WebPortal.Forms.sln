@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CAFAM.WebPortal.Forms", "..\..\WebSites\CAFAM.WebPortal.Forms\", "{3FF8EC77-8909-4826-A11C-11F2669D68D7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{681BEA88-0CFC-437B-AED7-C976C46B1783}|CAFAM.WebPortal.WebUI.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/CAFAM.WebPortal.Forms"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\CAFAM.WebPortal.Forms\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CAFAM.WebPortal.Forms\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CAFAM.WebPortal.Forms"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\CAFAM.WebPortal.Forms\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CAFAM.WebPortal.Forms\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3264"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAFAM.WebPortal.WebUI", "..\..\..\..\..\..\dev\csharp\cafam\workspace\projects\cafam\CAFAMY\CAFAM.WebPortal.WebUI\CAFAM.WebPortal.WebUI.csproj", "{681BEA88-0CFC-437B-AED7-C976C46B1783}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FF8EC77-8909-4826-A11C-11F2669D68D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF8EC77-8909-4826-A11C-11F2669D68D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF8EC77-8909-4826-A11C-11F2669D68D7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3FF8EC77-8909-4826-A11C-11F2669D68D7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3FF8EC77-8909-4826-A11C-11F2669D68D7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF8EC77-8909-4826-A11C-11F2669D68D7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3FF8EC77-8909-4826-A11C-11F2669D68D7}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3FF8EC77-8909-4826-A11C-11F2669D68D7}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{681BEA88-0CFC-437B-AED7-C976C46B1783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681BEA88-0CFC-437B-AED7-C976C46B1783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681BEA88-0CFC-437B-AED7-C976C46B1783}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{681BEA88-0CFC-437B-AED7-C976C46B1783}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{681BEA88-0CFC-437B-AED7-C976C46B1783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681BEA88-0CFC-437B-AED7-C976C46B1783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{681BEA88-0CFC-437B-AED7-C976C46B1783}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{681BEA88-0CFC-437B-AED7-C976C46B1783}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
