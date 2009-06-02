@@ -1,0 +1,474 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage" %>
+<%@ Register Assembly="AjaxControlToolkit, Version=1.0.10301.0, Culture=Neutral, PublicKeyToken=28f01b0e84b6d53e"
+    Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+    <LINK href="Stylesheet1.css" type=text/css rel=stylesheet>
+    <LINK href="Stylesheet2.css" type=text/css rel=stylesheet>
+    <LINK href="Stylesheet3.css" type=text/css rel=stylesheet>
+    <LINK href="Stylesheet4.css" type=text/css rel=stylesheet>
+</head>
+
+<body onload="javascript:if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();" scroll="yes">
+<form runat="server" method="post" action="master.aspx" 
+onsubmit="javascript:return WebForm_OnSubmit();" name="aspnetForm" id="aspnetForm">
+<div>
+
+<table height="100%" cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-main">
+  <tbody>
+  <tr>
+    <td>
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+        <tr>
+          <td colspan="4" class="ms-globalbreadcrumb"><span style="" id="TurnOnAccessibility"><a href="http://glb-vm:71/CAFAMPages/SuspensionTrabajadores.aspx#" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();return false;" class="ms-skip">Turn 
+            on more accessible mode</a> </span><a href="javascript:;" onclick="javascript:this.href='#mainContent';" accesskey="J" class="ms-skip">Skip to main content</a> 
+            <table height="100%" cellspacing="0" cellpadding="0" class="ms-globalleft">
+              <tbody>
+              <tr>
+                <td height="100%" valign="center" style="padding-top: 2px;" class="ms-globallinks">
+                  <div><span style="display: none;" id="TurnOffAccessibility"><a href="http://glb-vm:71/CAFAMPages/SuspensionTrabajadores.aspx#" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();return false;" class="ms-acclink">Turn 
+                  off more accessible mode</a> </span><span id="ctl00_PlaceHolderGlobalNavigation_PlaceHolderGlobalNavigationSiteMap_GlobalNavigationSiteMap"><span><a href="http://glb-vm:71/" class="ms-sitemapdirectional">Home</a></span></span> 
+              </div></td></tr></tbody></table>
+            <table height="100%" cellspacing="0" cellpadding="0" class="ms-globalright">
+              <tbody>
+              <tr>
+                <td valign="center" style="padding-right: 6px; padding-left: 3px;" class="ms-globallinks"/>
+                <td valign="center" class="ms-globallinks"><span style="display: none;">
+                  <menu largeiconmode="true" type="ServerMenu" id="zz3_ID_PersonalActionMenu"><ie:menuitem type="option" iconsrc="/_layouts/images/menuprofile.gif" onmenuclick="javascript:GoToPage('\u002f_layouts\u002fuserdisp.aspx?Force=True\u0026ID=' + _spUserId);return false;" text="My Settings" description="Update your user information, regional settings, and alerts." menugroupid="100" id="zz4_ID_PersonalInformation"/><ie:menuitem type="option" onmenuclick="javascript:LoginAsAnother('\u002f_layouts\u002fAccessDenied.aspx?loginasanotheruser=true', 0)" text="Sign in as Different User" description="Login with a different account." menugroupid="200" id="zz5_ID_LoginAsDifferentUser"/><ie:menuitem type="option" onmenuclick="window.location = '/_layouts/SignOut.aspx';" text="Sign Out" description="Logout of this site." menugroupid="200" id="zz6_ID_Logout"/></menu></span><span title="Open Menu">
+                  <div hoveractive="ms-SPLink ms-SpLinkButtonActive" hoverinactive="ms-SPLink ms-SpLinkButtonInActive" foa="MMU_GetMenuFromClientId('zz7_Menu')" nowrap="" onclick=" MMU_Open(byid('zz3_ID_PersonalActionMenu'), MMU_GetMenuFromClientId('zz7_Menu'),event,false, null, 0);" onmouseover="MMU_PopMenuIfShowing(this);MMU_EcbTableMouseOverOut(this, true)" id="zz7_Menu_t" oncontextmenu="this.click(); return false;" class="ms-SPLink ms-SpLinkButtonInActive"><a menutokenvalues="MENUCLIENTID=zz7_Menu,TEMPLATECLIENTID=zz3_ID_PersonalActionMenu" serverclientid="zz7_Menu" href="http://glb-vm:71/CAFAMPages/SuspensionTrabajadores.aspx#" onclick="javascript:return false;" accesskey="L" onfocus="MMU_EcbLinkOnFocusBlur(byid('zz3_ID_PersonalActionMenu'), this, true);" style="white-space: nowrap;" onkeydown="MMU_EcbLinkOnKeyDown(byid('zz3_ID_PersonalActionMenu'), MMU_GetMenuFromClientId('zz7_Menu'), event);" id="zz7_Menu" oncontextmenu="this.click(); return false;">Welcome 
+                  System Account<img border="0" src="assets/blank.gif" alt="Use SHIFT+ENTER to open the menu (new window)."/></a><img align="absbottom" src="assets/menudark.gif" alt=""/></div></span>
+                  <script type="text/javascript" language="javascript">var _spUserId=1073741823;</script>
+                </td>
+                <td style="padding-right: 3px; padding-left: 1px;" class="ms-globallinks">|</td>
+                <td valign="center" class="ms-globallinks">
+                  <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <tr>
+                      <td class="ms-globallinks"><span style="padding-left: 3px;"/><a href="http://glb-vm:71/MySite/_layouts/MySite.aspx" id="ctl00_PlaceHolderGlobalNavigation_ctl07_hlMySite">My 
+                        Site</a> <span style="padding-right: 3px; padding-left: 4px;">|</span> 
+                      </td>
+                      <td class="ms-globallinks">
+                        <table>
+                          <tbody>
+                          <tr>
+                            <td class="ms-globallinks"><span id="ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenu"><span style="display: none;">
+                              <menu largeiconmode="true" type="ServerMenu" id="ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenuTemplate"/></span><span title="Open Menu"><span nowrap="nowrap" hoveractive="ms-SPLink ms-hovercellactive" hoverinactive="ms-SPLink ms-hovercellinactive" foa="MMU_GetMenuFromClientId('ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenu')" onclick="javascript:FetchCallbackMenuItems('ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenuTemplate'); MMU_Open(byid('ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenuTemplate'), MMU_GetMenuFromClientId('ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenu'),event,true, null, 0);" onmouseover="MMU_PopMenuIfShowing(this);MMU_EcbTableMouseOverOut(this, true)" id="ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenu_t" oncontextmenu="this.click(); return false;" class="ms-SPLink ms-hovercellinactive"><a menutokenvalues="MENUCLIENTID=ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenu,TEMPLATECLIENTID=ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenuTemplate" serverclientid="ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenu" href="http://glb-vm:71/CAFAMPages/SuspensionTrabajadores.aspx#" onclick="javascript:return false;" accesskey="M" onfocus="MMU_EcbLinkOnFocusBlur(byid('ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenuTemplate'), this, true);" style="white-space: nowrap;" onkeydown="MMU_EcbLinkOnKeyDown(byid('ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenuTemplate'), MMU_GetMenuFromClientId('ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenu'), event);" id="ctl00_PlaceHolderGlobalNavigation_ctl08_MyLinksMenuMenu" oncontextmenu="this.click(); return false;">My 
+                              Links<img border="0" src="assets/blank.gif" alt="Use SHIFT+ENTER to open the menu (new window)."/></a><img align="absbottom" src="assets/menudark.gif" alt=""/></span></span></span></td>
+                            <td class="ms-globallinks">|</td></tr></tbody></table></td></tr></tbody></table></td>
+                <td valign="center" class="ms-globallinks">  <a href="javascript:TopHelpButtonClick('NavBarHelpHome')" accesskey="6" title="Help (new window)" id="ctl00_PlaceHolderGlobalNavigation_TopHelpLink"><img border="0" align="absmiddle" src="assets/helpicon.gif" alt="Help (new window)"/></a> 
+        </td></tr></tbody></table></td></tr></tbody></table></td></tr>
+  <tr>
+    <td class="ms-globalTitleArea">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody>
+        <tr>
+          <td id="GlobalTitleAreaImage" class="ms-titleimagearea"><img src="assets/titlegraphic.gif" alt="" style="border-width: 0px;" id="ctl00_onetidHeadbnnr0"/></td>
+          <td width="100%" class="ms-sitetitle">
+            <h1 class="ms-sitetitle"><a href="http://glb-vm:71/" id="ctl00_PlaceHolderSiteName_onetidProjectPropertyTitle">Home </a></h1></td>
+          <td valign="top" style="padding-top: 8px;">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" toplevel="">
+              <tbody>
+              <tr>
+                <td valign="top">
+                  <div webpartid="00000000-0000-0000-0000-000000000000" haspers="true" width="100%" onlyformepart="true" allowdelete="false" id="WebPartWPQ1">
+                  <div id="SRSB">
+                  <div><input type="hidden" name="ctl00$PlaceHolderSearchArea$ctl01$ctl00" value="http://glb-vm:71" id="ctl00_PlaceHolderSearchArea_ctl01_ctl00"/>
+                  <table border="0" class="ms-sbtable ms-sbtable-ex">
+                    <tbody>
+                    <tr class="ms-sbrow">
+                      <td class="ms-sbscopes ms-sbcell"><select name="ctl00$PlaceHolderSearchArea$ctl01$SBScopesDDL" title="Search Scope" id="ctl00_PlaceHolderSearchArea_ctl01_SBScopesDDL" class="ms-sbscopes"> 
+                          <option selected="" value="This Site">This Site: 
+                          Home</option></select></td>
+                      <td class="ms-sbcell"><input name="ctl00$PlaceHolderSearchArea$ctl01$S6AE27B38_InputKeywords" maxlength="200" alt="Enter search words" accesskey="S" style="width: 170px;" title="Enter search words" id="ctl00_PlaceHolderSearchArea_ctl01_S6AE27B38_InputKeywords" onkeypress="javascript:return S6AE27B38_OSBEK(event);" class="ms-sbplain"/></td>
+                      <td class="ms-sbgo ms-sbcell"><a href="javascript:S6AE27B38_Submit()" title="Go Search" id="ctl00_PlaceHolderSearchArea_ctl01_S6AE27B38_go"><img src="assets/gosearch.gif" alt="Go Search" onmouseout="this.src='/_layouts/images/gosearch.gif'" style="border-width: 0px;" title="Go Search" onmouseover="this.src='/_layouts/images/gosearch.gif'"/></a></td>
+                      <td class="ms-sbLastcell"/></tr></tbody></table></div></div></div></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+  <tr>
+    <td width="100%" id="onetIdTopNavBarContainer" class="ms-bannerContainer">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-bannerframe">
+        <tbody>
+        <tr>
+          <td nowrap="" valign="center"/>
+          <td nowrap="" width="99%" id="HBN100" class="ms-banner">
+            <table cellspacing="0" cellpadding="0" border="0" id="zz1_TopNavigationMenu" class="ms-topNavContainer zz1_TopNavigationMenu_5 zz1_TopNavigationMenu_2">
+              <tbody>
+              <tr>
+                <td onmouseout="Menu_Unhover(this)" title="Home" onmouseover="Menu_HoverRoot(this)" onkeyup="Menu_Key(this)" id="zz1_TopNavigationMenun0">
+                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-topnav zz1_TopNavigationMenu_4 ms-topnavselected zz1_TopNavigationMenu_10">
+                    <tbody>
+                    <tr>
+                      <td style="white-space: nowrap;"><a href="http://glb-vm:71/" accesskey="1" style="border-style: none; font-size: 1em;" class="zz1_TopNavigationMenu_1 ms-topnav zz1_TopNavigationMenu_3 ms-topnavselected zz1_TopNavigationMenu_9">Home</a></td></tr></tbody></table></td>
+                <td style="width: 0px;"/>
+                <td>
+                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="zz1_TopNavigationMenu_5">
+                    <tbody>
+                    <tr>
+                      <td style="width: 0px;"/>
+                      <td onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz1_TopNavigationMenun1">
+                        <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-topnav zz1_TopNavigationMenu_4">
+                          <tbody>
+                          <tr>
+                            <td style="white-space: nowrap;"><a href="http://glb-vm:71/defaultOLD.aspx" style="border-style: none; font-size: 1em;" class="zz1_TopNavigationMenu_1 ms-topnav zz1_TopNavigationMenu_3">Home</a></td></tr></tbody></table></td>
+                      <td style="width: 0px;"/></tr></tbody></table></td></tr></tbody></table></td>
+          <td class="ms-banner">  </td>
+          <td align="right" valign="bottom" style="left: 0px; bottom: 0px; position: relative;">
+            <table cellspacing="0" cellpadding="0" border="0">
+              <tbody>
+              <tr>
+                <td>
+                  <table height="100%" cellspacing="0" cellpadding="0" class="ms-siteaction">
+                    <tbody>
+                    <tr>
+                      <td id="siteactiontd" class="ms-siteactionsmenu"><span style="display: none;">
+                        <menu largeiconmode="true" type="ServerMenu" id="zz8_SiteActionsMenuMain"><ie:menuitem type="option" iconsrc="/_layouts/images/Actionscreate.gif" onmenuclick="window.location = '/_layouts/create.aspx';" text="Create" description="Add a new library, list, or web page to this website." menugroupid="100" id="zz9_MenuItem_Create"/><ie:menuitem type="option" iconsrc="/_layouts/images/ActionsSettings.gif" onmenuclick="window.location = '/_layouts/settings.aspx';" text="Site Settings" description="Manage site settings on this site." menugroupid="100" id="zz10_MenuItem_Settings"/></menu></span>
+                        <div>
+                        <div><span title="Open Menu">
+                        <div hoveractive="ms-siteactionsmenuhover" hoverinactive="" foa="MMU_GetMenuFromClientId('zz11_SiteActionsMenu')" nowrap="" onclick=" MMU_Open(byid('zz8_SiteActionsMenuMain'), MMU_GetMenuFromClientId('zz11_SiteActionsMenu'),event,false, null, 0);" onmouseover="MMU_PopMenuIfShowing(this);MMU_EcbTableMouseOverOut(this, true)" id="zz11_SiteActionsMenu_t" oncontextmenu="this.click(); return false;" class=""><a menutokenvalues="MENUCLIENTID=zz11_SiteActionsMenu,TEMPLATECLIENTID=zz8_SiteActionsMenuMain" serverclientid="zz11_SiteActionsMenu" href="http://glb-vm:71/CAFAMPages/SuspensionTrabajadores.aspx#" onclick="javascript:return false;" accesskey="/" onfocus="MMU_EcbLinkOnFocusBlur(byid('zz8_SiteActionsMenuMain'), this, true);" style="white-space: nowrap;" onkeydown="MMU_EcbLinkOnKeyDown(byid('zz8_SiteActionsMenuMain'), MMU_GetMenuFromClientId('zz11_SiteActionsMenu'), event);" id="zz11_SiteActionsMenu" oncontextmenu="this.click(); return false;">Site 
+                        Actions<img border="0" src="assets/blank.gif" alt="Use SHIFT+ENTER to open the menu (new window)."/></a><img align="absbottom" src="assets/whitearrow.gif" alt=""/></div></span></div></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+  <tr height="100%">
+    <td>
+      <table height="100%" cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+        <tr>
+          <td nowrap="" valign="center" id="TitleAreaImageCell" class="ms-titlearealeft"><div style="height: 100%;" class="ms-titleareaframe"/></td>
+          <td id="TitleAreaFrameClass" class="ms-titleareaframe">
+            <div class="ms-titleareaframe"><img height="100%" width="1" src="assets/blank.gif" alt=""/></div></td>
+          <td nowrap="" valign="top" id="onetidPageTitleAreaFrame" class="ms-pagetitleareaframe">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" id="onetidPageTitleAreaTable">
+              <tbody>
+              <tr>
+                <td valign="top" class="ms-titlearea"><span id="ctl00_PlaceHolderTitleBreadcrumb_ContentMap"><span><a href="http://glb-vm:71/" class="ms-sitemapdirectional">Home</a></span><span> > 
+                  </span><span><a href="http://glb-vm:71/CAFAMPages/Forms/AllItems.aspx" class="ms-sitemapdirectional">CAFAMPages</a></span><span> 
+                  > </span><span class="ms-sitemapdirectional">SuspensionTrabajadores</span></span> 
+                    </td></tr>
+              <tr>
+                <td height="100%" valign="top" id="onetidPageTitle" class="ms-pagetitle">
+                  <h2 class="ms-pagetitle"/></td></tr></tbody></table></td>
+          <td class="ms-titlearearight">
+            <div style="height: 100%;" class="ms-titleareaframe"><img height="1" width="1" src="assets/blank.gif" alt=""/></div></td></tr>
+        <tr>
+          <td height="100%" valign="top" id="LeftNavigationAreaCell" class="ms-leftareacell">
+            <table height="100%" cellspacing="0" cellpadding="0" width="100%" class="ms-nav">
+              <tbody>
+              <tr>
+                <td>
+                  <table height="100%" cellspacing="0" cellpadding="0" border="0" class="ms-navframe">
+                    <tbody>
+                    <tr valign="top">
+                      <td width="4"><img height="1" width="4" src="assets/blank.gif" alt=""/></td>
+                      <td width="100%" valign="top">
+                        <div class="ms-quicklaunchouter">
+                        <div style="width: 100%;" class="ms-quickLaunch">
+                        <h3 class="ms-standardheader"><label class="ms-hidden">Quick 
+                        Launch</label> <span>
+                        <div class="ms-quicklaunchheader"><a href="http://glb-vm:71/_layouts/viewlsts.aspx" accesskey="3" id="ctl00_PlaceHolderLeftNavBar_idNavLinkViewAll">View All 
+                        Site Content</a></div></span></h3>
+                        <div id="ctl00_PlaceHolderLeftNavBar_QuickLaunchNavigationManager">
+                        <div>
+                        <table cellspacing="0" cellpadding="0" border="0" id="zz2_QuickLaunchMenu" class="ms-navSubMenu1 zz2_QuickLaunchMenu_7 zz2_QuickLaunchMenu_2">
+                          <tbody>
+                          <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverRoot(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun0">
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navheader zz2_QuickLaunchMenu_4"><tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/_layouts/viewlsts.aspx?BaseType=1" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navheader zz2_QuickLaunchMenu_3">Documents</a></td></tr></tbody></table></td></tr>
+                          <tr>
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navSubMenu2 zz2_QuickLaunchMenu_8"><tbody>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun1">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Shared%20Documents/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Shared 
+                                Documents</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun2">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/TestUC23/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">TestUC23</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun3">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/UC18/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">UC18</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun4">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/UC20/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">UC20</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun5">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/UC19/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">UC19</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun6">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/UC21/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">UC21</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun7">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/UC21b/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">UC21b</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun8">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/CAFAMPages/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">CAFAMPages</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun9">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Anonymous/Forms/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Anonymous</a></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+                          <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverRoot(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun10">
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navheader zz2_QuickLaunchMenu_4"><tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/_layouts/viewlsts.aspx?BaseType=0" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navheader zz2_QuickLaunchMenu_3">Lists</a></td></tr></tbody></table></td></tr>
+                          <tr>
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navSubMenu2 zz2_QuickLaunchMenu_8"><tbody>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun11">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Calendar/calendar.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Calendar</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun12">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Tasks/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Tasks</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun13">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/AddressListLetter/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">AddressListLetter</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun14">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/AddressList/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">AddressList</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun15">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/FreeTime/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">FreeTime</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun16">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Pets/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Pets</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun17">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Places/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Places</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun18">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Sports/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Sports</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun19">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/FavouriteFood/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">FavouriteFood</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun20">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Cities/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Cities</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun21">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/MaritalState/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">MaritalState</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun22">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/EPS/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">EPS</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun23">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/ARP/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">ARP</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun24">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Course/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Course</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun25">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Position/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Position</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun26">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/UnemploymentFund/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">UnemploymentFund</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun27">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/PensionFund/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">PensionFund</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun28">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/CompensationFund/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">CompensationFund</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun29">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/TopicOfInterest/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">TopicOfInterest</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun30">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/IdentifitcationType/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">IdentificationType</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun31">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/IncomeLevel/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">IncomeLevel</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun32">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/a/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">a</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun33">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/SecurityQuestion/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">SecurityQuestion</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun34">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/FalseCompanies/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">FalseCompany</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun35">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/FalseAddress/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">FalseAddress</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun36">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/SubsidyFileTypes/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">SubsidyFileTypes</a></td></tr></tbody></table></td></tr>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun37">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/SubsidyFileBinding/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">SubsidyFileBinding</a></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+                          <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverRoot(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun38">
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navheader zz2_QuickLaunchMenu_4"><tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/_layouts/viewlsts.aspx?BaseType=0&amp;ListTemplate=108" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navheader zz2_QuickLaunchMenu_3">Discussions</a></td></tr></tbody></table></td></tr>
+                          <tr>
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navSubMenu2 zz2_QuickLaunchMenu_8"><tbody>
+                                <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverStatic(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun39">
+                                <td>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navitem zz2_QuickLaunchMenu_6">
+                                <tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/Lists/Team%20Discussion/AllItems.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navitem zz2_QuickLaunchMenu_5">Team 
+                                Discussion</a></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+                          <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverRoot(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun40">
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navheader zz2_QuickLaunchMenu_4"><tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/_layouts/viewlsts.aspx?ShowSites=1" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navheader zz2_QuickLaunchMenu_3">Sites</a></td></tr></tbody></table></td></tr>
+                          <tr onmouseout="Menu_Unhover(this)" onmouseover="Menu_HoverRoot(this)" onkeyup="Menu_Key(this)" id="zz2_QuickLaunchMenun41">
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-navheader zz2_QuickLaunchMenu_4"><tbody>
+                                <tr>
+                                <td style="width: 100%;"><a href="http://glb-vm:71/_layouts/people.aspx" style="border-style: none; font-size: 1em;" class="zz2_QuickLaunchMenu_1 ms-navheader zz2_QuickLaunchMenu_3">People 
+                                and 
+                          Groups</a></td></tr></tbody></table></td></tr></tbody></table></div></div>
+                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tbody>
+                          <tr>
+                            <td>
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%" class="ms-recyclebin">
+                                <tbody>
+                                <tr>
+                                <td nowrap=""><a href="http://glb-vm:71/_layouts/recyclebin.aspx" id="ctl00_PlaceHolderLeftNavBar_idNavLinkRecycleBin"><img align="absmiddle" src="assets/recycbin.gif" alt="" style="border-width: 0px;"/> Recycle Bin</a> 
+                                </td></tr></tbody></table></td></tr></tbody></table></div></div></td></tr>
+                    <tr>
+                      <td colspan="2"><img height="1" width="138" src="assets/blank.gif" alt=""/></td></tr></tbody></table></td>
+                <td/></tr></tbody></table></td>
+          <td>
+            <div class="ms-pagemargin"><img height="1" width="10" src="assets/blank.gif" alt=""/></div></td>
+          <td valign="top" class="ms-bodyareacell">
+<placeholder id="ctl00_MSO_ContentDiv">
+<asp:contentplaceholder id="PlaceHolderMain" runat="server">
+</asp:contentplaceholder>
+</placeholder>
+</td>
+          <td class="ms-rightareacell">
+            <div class="ms-pagemargin"><img height="1" width="10" src="assets/blank.gif" alt=""/></div></td></tr>
+        <tr>
+          <td class="ms-pagebottommarginleft"><img height="10" width="1" src="assets/blank.gif" alt=""/></td>
+          <td class="ms-pagebottommargin"><img height="10" width="1" src="assets/blank.gif" alt=""/></td>
+          <td class="ms-bodyareapagemargin"><img height="10" width="1" src="assets/blank.gif" alt=""/></td>
+          <td class="ms-pagebottommarginright"><img height="10" width="1" src="assets/blank.gif" alt=""/></td></tr></tbody></table></td></tr></tbody></table><input name="__spDummyText1" size="1" style="display: none;"/> <input name="__spDummyText2" size="1" style="display: none;"/>
+
+ 
+</form></body>
+
+
+</html>
+
+
+
+
+
+
+
