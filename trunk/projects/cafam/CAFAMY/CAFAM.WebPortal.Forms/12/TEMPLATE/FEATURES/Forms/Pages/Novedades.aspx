@@ -21,18 +21,18 @@
         <td>
             <asp:Wizard runat="server" ID="wzNovedadesTrabajador"  Font-Names="verdana" CssClass="content-more" ForeColor="navy" Style="border: outset 1px black" OnNextButtonClick="OnNext" OnActiveStepChanged="OnActiveStepChanged" OnFinishButtonClick="OnFinish" ActiveStepIndex="0" DisplaySideBar="false"  >
                 <WizardSteps>
-                
+                 
                 
                     <asp:WizardStep ID="wzDatosDeLaEmpresaStep" runat="server" StepType="auto" Title="">
-                         <table  style="width: 700px" runat="server" border="0">  
+                         <table class="ms-formbody" style="width: 700px" runat="server" border="0">  
                             <tr>
-                                <td class="title-form" colspan="3">
-                                    <asp:Label ID="lblDatosGenerales" runat="server" Text="Datos de la empresa" CssClass="title-form"></asp:Label>
+                                <td class="form_section_header" colspan="3">
+                                    <asp:Label ID="lblDatosGenerales" runat="server" Text="Datos de la empresa" class="form_section_header"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblNitTitulo" Text="Nit" CssClass="form_label"/><span class="form_label"> &nbsp;<font class="form_field_error_message">(*)</font>&nbsp;
+                                    <asp:Label runat="server" ID="lblNitTitulo" Text="Nit" CssClass="form_label@/><span class="form_label"> &nbsp;<font class="form_field_error_message">(*)</font>&nbsp;
                                 </td>
                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                  <td>
@@ -93,62 +93,81 @@
                     </asp:WizardStep>
                     
                     
-                    
-                    
-                    
                     <asp:WizardStep ID="wzDatosDelTrabajadorStep" runat="server" StepType="auto" Title="">
                         <table id="Table1" style="width: 750px" runat="server">  
                             <tr>
-                                <td scope="row" class="title-form">
-                                        <asp:Label ID="Label1" runat="server" Text="Datos del trabajador " CssClass="title-form"></asp:Label>
+                                <td class="form_section_header">
+                                        <asp:Label ID="lblTituloSeccionDatpoTrabajador" runat="server" Text="Datos del trabajador " class="form_section_header"></asp:Label>
                                 </td>
                             </tr>
-                            <tr>
+                            
+                               <tr>        
                                 <td>
-                                    <asp:Label runat="server" ID="lblTipoDeIdentificacionTitulo" Text="Tipo De Identificaci&oacute;n" CssClass="form_label"/><span class="form_label">&nbsp;<font class="form_field_error_message">(*)</font>&nbsp;
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td colspan="10">
+                                                <asp:Label runat="server" ID="lblTipoDeIdentificacionT" Text="Identificación" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblTipoDeIdentificacionTitulo" Text="Tipo" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:RadioButtonList ID="RadioButtonList1" runat="server" repeatdirection="Horizontal" CssClass="form_radios" />
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblNumeroDeIdentificacionTitulo" Text="Numero De Identificación" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtNumeroDeIdentificacion" CssClass="form_text" MaxLength="11"/>
+                                            </td>                        
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="rqvTipoDeIdentificacion" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="rdTipoDeIdentificacion"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RegularExpressionValidator ID="revNumeroDeIdentificacion" runat="server" CssClass="form_field_error_message"
+                                                    ErrorMessage="Solo puede ingresar números" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacion"
+                                                    ValidationExpression="^[\d]*$"></asp:RegularExpressionValidator>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtTipoDeIdentificacion" CssClass="form_text" MaxLength="1"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RequiredFieldValidator ID="rqvTipoDeIdentificacion" runat="server" CssClass="form_field_error_message"
-                                    ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtTipoDeIdentificacion"  ></asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revTipoDeIdentificacion" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtTipoDeIdentificacion"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblNumeroDeIdentificacionTitulo" Text="N&uacute;mero De Identificaci&oacute;n" CssClass="form_label"/><span class="form_label">&nbsp;<font class="form_field_error_message">(*)</font>&nbsp;
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtNumeroDeIdentificacion" CssClass="form_text" MaxLength="13"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RequiredFieldValidator ID="rqvNumeroDeIdentificacion" runat="server" CssClass="form_field_error_message"
-                                    ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacion"  ></asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revNumeroDeIdentificacion" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacion"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
+                                    
+                            
                             <tr>
                                 <td>
                                     <asp:Label runat="server" ID="lblSucursalTitulo" Text="Sucursal" CssClass="form_label"/><span class="form_label">&nbsp;<font class="form_field_error_message">(*)</font>&nbsp;
@@ -172,56 +191,79 @@
                                         ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
                                 </td>
                             </tr>
+                            
+                               <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerApellidoTitulo0" Text="Apellidos" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerApellidoTitulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPrimerApellido" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSegundoApellidoTitulo" Text="Segundo" CssClass="form_label"/><span class="form_label">&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtSegundoApellido" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="rqvPrimerApellido0" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerApellido"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>                    
+                                    </table>
+                                 </td>
+                               </tr>
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblPrimerApellidoTitulo" Text="Primer Apellido" CssClass="form_label"/><span class="form_label">&nbsp;<font class="form_field_error_message">(*)</font>&nbsp;
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPrimerApellido" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RequiredFieldValidator ID="rqvPrimerApellido" runat="server" CssClass="form_field_error_message"
-                                    ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerApellido"  ></asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSegundoApellidoTitulo" Text="Segundo Apellido" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtSegundoApellido" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblPrimerNombreTitulo" Text="Primer Nombre" CssClass="form_label"/><span class="form_label">&nbsp;<font class="form_field_error_message">(*)</font>&nbsp;
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPrimerNombre" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RequiredFieldValidator ID="rqvPrimerNombre" runat="server" CssClass="form_field_error_message"
-                                    ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerNombre"  ></asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSegundoNombreTitulo" Text="Segundo Nombre" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtSegundoNombre" CssClass="form_text" MaxLength="20"/>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerNombreTitulo0" Text="Nombres" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>                
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerNombreTitulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPrimerNombre" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSegundoNombreTitulo" Text="Segundo" CssClass="form_label"/>&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtSegundoNombre" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="rqvPrimerNombre0" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerNombre"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                    </table>                
                                 </td>
                             </tr>
                             <!--es un check, soltero, casado, viudo, separado, uni&oacute;n libre-->
@@ -624,7 +666,7 @@
                     <asp:WizardStep ID="wzDatosDelConyugeOCompaneraoStep" runat="server" StepType="auto" Title=""><br /><br />
                           <table id="Table2" style="width: 750px" runat="server">  
                             <tr>
-                                <td scope="row" class="title-form">
+                                <td scope="row" class="form_section_header">
                                         <asp:Label ID="Label2" runat="server" Text="Datos del conyugue o companiero" CssClass="title-form"></asp:Label>
                                 </td>
                             </tr>
@@ -640,108 +682,186 @@
                             </tr>
                            
                             <!--es un check, 1= CC, 2= TI, 3=CE-->
+                            
+                              <tr>        
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td colspan="10">
+                                                <asp:Label runat="server" ID="lblTipoDeIdentificacionT2" Text="Identificación" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblTipoDeIdentificacion2Titulo" Text="Tipo" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:RadioButtonList ID="rdTipoDeIdentificacion2" runat="server" repeatdirection="Horizontal" CssClass="form_radios" />
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblNumeroDeIdentificacion2Titulo" Text="Numero De Identificación" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtNumeroDeIdentificacion2" CssClass="form_text" MaxLength="11"/>
+                                            </td>                        
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="rqvTipoDeIdentificacion2" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="rdTipoDeIdentificacion2"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RegularExpressionValidator ID="revNumeroDeIdentificacion2" runat="server" CssClass="form_field_error_message"
+                                                    ErrorMessage="Solo puede ingresar números" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacion2"
+                                                    ValidationExpression="^[\d]*$"></asp:RegularExpressionValidator>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>  
+                            
+                            
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblTipoDeIdentificacion2Titulo" Text="Tipo De Identificaci&oacute;n" CssClass="form_label"/>
+                                   <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblConvivenTitulo" Text="Conviven" CssClass="form_label"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                             <td>
+                                                <asp:Label runat="server" ID="lblTipoDeRelacionTitulo" Text="Tipo De Relaci&oacute;n" CssClass="form_label"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                 <asp:RadioButtonList ID="rdlConvivenciaConyugue" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
+                                                  <asp:ListItem Value="Si" Text="Si&nbsp;&nbsp;" />
+                                                  <asp:ListItem Value="No" Text="No&nbsp;&nbsp;" />
+                                                </asp:RadioButtonList>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                             <td>
+                                               <asp:RadioButtonList ID="rdlTipoRelacionConyugue" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
+                                                  <asp:ListItem Value="Conyugue" Text="Conyugue&nbsp;&nbsp;" />
+                                                  <asp:ListItem Value="Companiero" Text="Compa&ntilde;ero/a No&nbsp;&nbsp;" />
+                                                </asp:RadioButtonList>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtTipoDeIdentificacion2" CssClass="form_text" MaxLength="1"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revTipoDeIdentificacion2" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtTipoDeIdentificacion2"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblNumeroDeIdentificacion2Titulo" Text="N&uacute;mero De Identificaci&oacute;n" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtNumeroDeIdentificacion2" CssClass="form_text" MaxLength="13"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revNumeroDeIdentificacion2" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacion2"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblConvivenTitulo" Text="Conviven" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <asp:CheckBox CssClass="form_checkbox" ID="boolConviven" runat="server"/>
-                                </td>
-                            </tr>
+                               
+                               
                             <!--es un check, c&oacute;nyuge, compañera(o)-->
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblTipoDeRelacionTitulo" Text="Tipo De Relaci&oacute;n" CssClass="form_label"/>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerApellidoTitulo2" Text="Apellidos" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerApellido2Titulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPrimerApellido2" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSegundoApellido2Titulo" Text="Segundo" CssClass="form_label"/><span class="form_label">&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtSegundoApellido2" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerApellido2"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>                    
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:TextBox runat="server" ID="txtTipoDeRelacion" CssClass="form_text" MaxLength="1"/>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerNombreTitulo2" Text="Nombres" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>                
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerNombre2Titulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPrimerNombre2" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSegundoNombre2Titulo" Text="Segundo" CssClass="form_label"/>&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtSegundoNombre2" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerNombre2"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                    </table>                
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revTipoDeRelacion" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtTipoDeRelacion"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblPrimerApellido2Titulo" Text="Primer Apellido" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPrimerApellido2" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSegundoApellido2Titulo" Text="Segundo Apellido" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtSegundoApellido2" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblPrimerNombre2Titulo" Text="Primer Nombre" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPrimerNombre2" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSegundoNombre2Titulo" Text="Segundo Nombre" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtSegundoNombre2" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
+                            
                             <!--AAAAMMDD-->
                             <tr>
                                 <td>
@@ -800,30 +920,34 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:TextBox runat="server" ID="txtOcupacion" CssClass="form_text" MaxLength="1"/>
+                                    <asp:RadioButtonList ID="rdlOcupacionConyugue" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
+                                      <asp:ListItem Value="Hogar" Text="Hogar&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="Empleado" Text="Empleado&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="Independiente" Text="Independiente&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="Pensionado" Text="Pensionado&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="SinEmpleo" Text="Sin Empleo&nbsp;&nbsp;" />
+                                    </asp:RadioButtonList>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:RegularExpressionValidator ID="revOcupacion" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtOcupacion"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
+                                    <asp:RequiredFieldValidator ID="rqvOcupacionConyugue" runat="server" CssClass="form_field_error_message"
+                                    ErrorMessage="Seleccione una ocupaci&oacute;n" Display="Dynamic" ControlToValidate="rdlOcupacionConyugue"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                   <asp:Label CssClass="form_label" ID="lblSiElConyugeOCompaneraoEsEmpleadoDiligencie" runat="server"/>
+                                   <asp:Label CssClass="form_label" ID="lblSiElConyugeEsEmpleado"  Text="Si el Conyugue o Compa&ntilde;era (o) Es empleado " runat="server"/>
                                 </td>
                             </tr>
                             <!--es obligatorio si el campo ocupaci&oacute;n  esta marcado con empleado-->
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblRecibeSubsidioTitulo" Text="Recibe Subsidio" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <asp:CheckBox CssClass="form_checkbox" ID="boolRecibeSubsidio" runat="server"/>
+                                    <asp:Label runat="server" ID="lblRecibeSubsidioTitulo" Text="Recibe Subsidio?" CssClass="form_label"/> &nbsp;&nbsp;&nbsp;  
+                                     <asp:RadioButtonList ID="rdlConyugueRecibeSubsidio" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
+                                      <asp:ListItem Value="Si" Text="Si&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="No" Text="No&nbsp;&nbsp;" />
+                                      </asp:RadioButtonList>
                                 </td>
                             </tr>
                             <!--es obligatorio si el campo ocupaci&oacute;n  esta marcado con empleado-->
@@ -834,13 +958,13 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:TextBox runat="server" ID="txtNit3" CssClass="form_text" MaxLength="13"/>
+                                    <asp:TextBox runat="server" ID="txtConyugueNit3" CssClass="form_text" MaxLength="13"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <asp:RegularExpressionValidator ID="revNit3" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtNit3"
+                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtConyugueNit3"
                                         ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
                                 </td>
                             </tr>
@@ -863,13 +987,13 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:TextBox runat="server" ID="txtSueldoBasico3" CssClass="form_text" MaxLength="9"/>
+                                    <asp:TextBox runat="server" ID="txtConyugueSueldoBasico3" CssClass="form_text" MaxLength="9"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <asp:RegularExpressionValidator ID="revSueldoBasico3" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtSueldoBasico3"
+                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtConyugueSueldoBasico3"
                                         ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
                                 </td>
                             </tr>
@@ -880,118 +1004,187 @@
                     
                     
                     
+                    
+                    
+                    
                     <asp:WizardStep ID="wzDatosDelPadreOMadreBiologicaoDelHijoAInscribirStep" runat="server" StepType="auto" Title=""><br /><br />
                         <table id="Table3" style="width: 750px" runat="server">  
                             <tr>
-                                <td scope="row" class="title-form">
+                                <td scope="row" class="form_section_header">
                                         <asp:Label ID="Label3" runat="server" Text="Datos de los padres" CssClass="title-form"></asp:Label>
                                 </td>
                             </tr>
                             <!--es un check, 1= CC, 2= TI, 3=CE-->
-                            <tr>
+                            
+                             <tr>        
                                 <td>
-                                    <asp:Label runat="server" ID="lblTipoDeIdentificacion3Titulo" Text="Tipo De Identificaci&oacute;n" CssClass="form_label"/>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td colspan="10">
+                                                <asp:Label runat="server" ID="lblTipoDeIdentificacionT3" Text="Identificación" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblTipoDeIdentificacion3Titulo" Text="Tipo" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:RadioButtonList ID="rdTipoDeIdentificacion3" runat="server" repeatdirection="Horizontal" CssClass="form_radios" />
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblNumeroDeIdentificacion3Titulo" Text="Numero De Identificación" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtNumeroDeIdentificacion3" CssClass="form_text" MaxLength="11"/>
+                                            </td>                        
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="revTipoDeIdentificacion3" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="rdTipoDeIdentificacion3"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RegularExpressionValidator ID="revNumeroDeIdentificacion3" runat="server" CssClass="form_field_error_message"
+                                                    ErrorMessage="Solo puede ingresar números" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacion3"
+                                                    ValidationExpression="^[\d]*$"></asp:RegularExpressionValidator>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                           <tr>
+                                <td>
+                                   <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblConviven2Titulo" Text="Conviven" CssClass="form_label"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:RadioButtonList ID="rdlConviven2" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
+                                                  <asp:ListItem Value="Si" Text="Si&nbsp;&nbsp;" />
+                                                  <asp:ListItem Value="No" Text="No&nbsp;&nbsp;" />
+                                                </asp:RadioButtonList>
+                                            </td>
+                                        </tr>
+                                        <!--se autocompleta cuando se completa alg&uacute;n campo de este cuadro-->
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPadreOMadreBiologicaTitulo" Text="Padre O Madre Biol&oacute;gica" CssClass="form_label"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPadreOMadreBiologica" CssClass="form_text" MaxLength="1"/>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:RadioButtonList ID="rdTipoDeIdentificacion" runat="server" repeatdirection="Horizontal" CssClass="form_radios" />
-                                    <!-- <asp:TextBox runat="server" ID="txtTipoDeIdentificacion3" CssClass="form_text" MaxLength="1"/> -->
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerApellidoTitulo3" Text="Apellidos" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerApellido3Titulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPrimerApellido3" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSegundoApellido3Titulo" Text="Segundo" CssClass="form_label"/><span class="form_label">&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtSegundoApellido3" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="rqvPrimerApellido3" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerApellido3"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>                    
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:RegularExpressionValidator ID="revTipoDeIdentificacion3" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtTipoDeIdentificacion3"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerNombreTitulo3" Text="Nombres" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>                
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerNombre3Titulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPrimerNombre3" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSegundoNombre3Titulo" Text="Segundo" CssClass="form_label"/>&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtSegundoNombre3" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="rqvPrimerNombre3" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerNombre3"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                    </table>                
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblNumeroDeIdentificacion3Titulo" Text="Numero De Identificaci&oacute;n" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtNumeroDeIdentificacion3" CssClass="form_text" MaxLength="13"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revNumeroDeIdentificacion3" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacion3"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblConviven2Titulo" Text="Conviven" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <asp:CheckBox CssClass="form_checkbox" ID="boolConviven2" runat="server"/>
-                                </td>
-                            </tr>
-                            <!--se autocompleta cuando se completa alg&uacute;n campo de este cuadro-->
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblPadreOMadreBiologicaTitulo" Text="Padre O Madre Biol&oacute;gica" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPadreOMadreBiologica" CssClass="form_text" MaxLength="1"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revPadreOMadreBiologica" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtPadreOMadreBiologica"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblPrimerApellido3Titulo" Text="Primer Apellido" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPrimerApellido3" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSegundoApellido3Titulo" Text="Segundo Apellido" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtSegundoApellido3" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblPrimerNombre3Titulo" Text="Primer Nombre" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPrimerNombre3" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSegundoNombre3Titulo" Text="Segundo Nombre" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtSegundoNombre3" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <!--AAAAMMDD-->
                             <tr>
                                 <td>
                                     <asp:Label runat="server" ID="lblFechaDeNacimiento3Titulo" Text="Fecha De Nacimiento (dd/mm/aaaa)" CssClass="form_label"/>
@@ -1005,19 +1198,24 @@
                             <!--es un check, hogar, empleado, independiente, pensionado, sin empleo-->
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblOcupacion2Titulo" Text="Ocupaci&oacute;n" CssClass="form_label"/>
+                                    <asp:Label runat="server" ID="lblOcupacionPadres" Text="Ocupaci&oacute;n" CssClass="form_label"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:TextBox runat="server" ID="txtOcupacion2" CssClass="form_text" MaxLength="1"/>
+                                    <asp:RadioButtonList ID="rdlOcupacionPadres" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
+                                      <asp:ListItem Value="Hogar" Text="Hogar&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="Empleado" Text="Empleado&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="Independiente" Text="Independiente&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="Pensionado" Text="Pensionado&nbsp;&nbsp;" />
+                                      <asp:ListItem Value="SinEmpleo" Text="Sin Empleo&nbsp;&nbsp;" />
+                                    </asp:RadioButtonList>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:RegularExpressionValidator ID="revOcupacion2" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtOcupacion2"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="form_field_error_message"
+                                    ErrorMessage="Seleccione una ocupaci&oacute;n" Display="Dynamic" ControlToValidate="rdlOcupacionPadres"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
@@ -1141,7 +1339,7 @@
                     <asp:WizardStep ID="wzPersonasACargoStep" runat="server" StepType="auto" Title=""><br /><br />
                         <table id="Table4" style="width: 750px" runat="server">  
                             <tr>
-                                <td scope="row" class="title-form">
+                                <td scope="row" class="form_section_header">
                                         <asp:Label ID="Label4" runat="server" Text="Datos de personas a cargo" CssClass="title-form"></asp:Label>
                                 </td>
                             </tr>
@@ -1183,181 +1381,284 @@
                                     </asp:UpdatePanel>
                                 </td>
                             </tr>
-                            <tr>
+                            
+                            <tr>        
                                 <td>
-                                    <asp:Label runat="server" ID="lblTipoDeIdentificacion4Titulo" Text="Tipo De Identificaci&oacute;n" CssClass="form_label"/>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td colspan="10">
+                                                <asp:Label runat="server" ID="lblACargoTipoIdent" Text="Identificación" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblACargoTipoIdentificacion" Text="Tipo" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:RadioButtonList ID="rdlACargoTipoIdentificacion" runat="server" repeatdirection="Horizontal" CssClass="form_radios" />
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblACargoNumeroIdentificacion" Text="Numero De Identificación" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtACargoNumeroIdentificacion" CssClass="form_text" MaxLength="11"/>
+                                            </td>                        
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="revACargoTipoIdentificacion" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="rdlACargoTipoIdentificacion"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RegularExpressionValidator ID="revACargoNumeroIdentificacion" runat="server" CssClass="form_field_error_message"
+                                                    ErrorMessage="Solo puede ingresar números" Display="Dynamic" ControlToValidate="txtACargoNumeroIdentificacion"
+                                                    ValidationExpression="^[\d]*$"></asp:RegularExpressionValidator>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                              <tr>        
+                                <td><br />
+                                </td>
+                              </tr>        
+                            
+                              <tr>        
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td colspan="10">
+                                                <asp:Label runat="server" ID="lblACargoTipoIdentPadre" Text="Identificación del Padre Asociado" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblACargoTipoIdentPadre" Text="Tipo" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:RadioButtonList ID="rdlACargoTipoIdentPadre" runat="server" repeatdirection="Horizontal" CssClass="form_radios" />
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblACargoNumeroIdentPadre" Text="Numero De Identificación" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtACargoNumeroIdentPadre" CssClass="form_text" MaxLength="11"/>
+                                            </td>                        
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="revACargoTipoIdentPadre" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="rdlACargoTipoIdentPadre"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RegularExpressionValidator ID="revACargoNumeroIdentPadre" runat="server" CssClass="form_field_error_message"
+                                                    ErrorMessage="Solo puede ingresar números" Display="Dynamic" ControlToValidate="txtACargoNumeroIdentPadre"
+                                                    ValidationExpression="^[\d]*$"></asp:RegularExpressionValidator>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:RadioButtonList ID="rdlIdentificacionTrabajador" runat="server" repeatdirection="Horizontal" CssClass="form_radios" />
-                                    <!-- <asp:TextBox runat="server" ID="txtTipoDeIdentificacion4" CssClass="form_text" MaxLength="1"/> -->
+                                     <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSexo2Titulo" Text="Sexo" CssClass="form_label"/> &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                             <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblFechaDeNacimiento4Titulo" Text="Fecha De Nacimiento (dd/mm/aaaa)" CssClass="form_label"/>
+                                            </td>                 
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:RadioButtonList ID="rdlSexoACargo" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
+                                                  <asp:ListItem Value="F" Text="Femenino&nbsp;&nbsp;" />
+                                                  <asp:ListItem Value="M" Text="Masculino&nbsp;&nbsp;" />
+                                                </asp:RadioButtonList>
+                                            </td>
+                                             <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                               <asp:Panel ID="pnldtFechaDeNacimiento4" runat="server"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerApellidoTitulo4" Text="Apellidos" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerApellido4Titulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPrimerApellido4" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSegundoApellido4Titulo" Text="Segundo" CssClass="form_label"/><span class="form_label">&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtSegundoApellido4" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="rqvPrimerApellido4" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerApellido4"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>                    
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:RegularExpressionValidator ID="revTipoDeIdentificacion4" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="rdlIdentificacionTrabajador"
-                                        ValidationExpression="^[\d]*$"></asp:RegularExpressionValidator>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerNombreTitulo4" Text="Nombres" CssClass="form_label"/><span class="form_label"></span>
+                                            </td>
+                                        </tr>                
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblPrimerNombre4Titulo" Text="Primero" CssClass="form_label"/><span class="form_label">&nbsp;&nbsp;(&nbsp;<span style="color:red">*</span>&nbsp;)&nbsp;</span>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtPrimerNombre4" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                            <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblSegundoNombre4Titulo" Text="Segundo" CssClass="form_label"/>&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtSegundoNombre4" CssClass="form_text" MaxLength="20"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="rqvPrimerNombre3" runat="server" CssClass="form_field_error_message"
+                                                ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="txtPrimerNombre4"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                    </table>                
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblNumeroDeIdentificacion4Titulo" Text="Numero De Identificaci&oacute;n" CssClass="form_label"/>
+                                     <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblParentescoTitulo" Text="Parentesco" CssClass="form_label"/>
+                                            </td>
+                                             <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <asp:Label runat="server" ID="lblDiscapacitadoTitulo" Text="Discapacitado" CssClass="form_label"/>
+                                            </td>                 
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:RadioButtonList ID="rdlParentesco" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
+                                                  <asp:ListItem Value="Hijo" Text="Hijo&nbsp;&nbsp;" />
+                                                  <asp:ListItem Value="Hijastro" Text="Hijastro&nbsp;&nbsp;" />
+                                                  <asp:ListItem Value="Adoptivo" Text="Adoptivo&nbsp;&nbsp;" />
+                                                  <asp:ListItem Value="Hermano" Text="Hermano&nbsp;&nbsp;" />
+                                                  <asp:ListItem Value="Padre" Text="Padre&nbsp;&nbsp;" />
+                                                </asp:RadioButtonList>
+                                            </td>
+                                             <td>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                               <asp:CheckBox CssClass="form_checkbox" ID="ckbDiscapacitado" runat="server"/>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtNumeroDeIdentificacion4" CssClass="form_text" MaxLength="13"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revNumeroDeIdentificacion4" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacion4"
-                                        ValidationExpression="^[\d]*$"></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <!--Si va a inscribir personas a cargo es obligatorio-->
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblTipoDeIdentificacionDelPadreAsociadoTitulo" Text="Tipo De Identificaci&oacute;n Del Padre Asociado" CssClass="form_label"/><span class="form_label">&nbsp;<font class="form_field_error_message">(*)</font>&nbsp;
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RadioButtonList ID="rdlIdentificacionPariente" runat="server" repeatdirection="Horizontal" CssClass="form_radios" />
-                                    <!-- <asp:TextBox runat="server" ID="txtTipoDeIdentificacionDelPadreAsociado" CssClass="form_text" MaxLength="1"/> -->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RequiredFieldValidator ID="rqvTipoDeIdentificacionDelPadreAsociado" runat="server" CssClass="form_field_error_message"
-                                    ErrorMessage="Requerido" Display="Dynamic" ControlToValidate="rdlIdentificacionPariente"  ></asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revTipoDeIdentificacionDelPadreAsociado" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="rdlIdentificacionPariente"
-                                        ValidationExpression="^[\d]*$" ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <!-- Si va a inscribir personas a cargo es obligatorio -->
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblNumeroDeIdentificacionDelPadreAsociadoTitulo" Text="N&uacute;mero  De Identificaci&oacute;n Del Padre Asociado" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtNumeroDeIdentificacionDelPadreAsociado" CssClass="form_text" MaxLength="13"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revNumeroDeIdentificacionDelPadreAsociado" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtNumeroDeIdentificacionDelPadreAsociado"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSexo2Titulo" Text="Sexo" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                 <td>
-                                    <asp:RadioButtonList ID="rdlSexoACargo" runat="server" repeatdirection="Horizontal" CssClass="form_radios">
-                                      <asp:ListItem Value="F" Text="Femenino&nbsp;&nbsp;" />
-                                      <asp:ListItem Value="M" Text="Masculino&nbsp;&nbsp;" />
-                                    </asp:RadioButtonList>
-                                 </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revSexo2" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtSexo2"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblFechaDeNacimiento4Titulo" Text="Fecha De Nacimiento (dd/mm/aaaa)" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <asp:Panel ID="pnldtFechaDeNacimiento4" runat="server"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblPrimerApellido4Titulo" Text="Primer Apellido" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPrimerApellido4" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSegundoApellido4Titulo" Text="Segundo Apellido" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtSegundoApellido4" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblPrimerNombre4Titulo" Text="Primer Nombre" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtPrimerNombre4" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblSegundoNombre4Titulo" Text="Segundo Nombre" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtSegundoNombre4" CssClass="form_text" MaxLength="20"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblParentescoTitulo" Text="Parentesco" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:TextBox runat="server" ID="txtParentesco" CssClass="form_text" MaxLength="1"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:RegularExpressionValidator ID="revParentesco" runat="server" CssClass="form_field_error_message"
-                                        ErrorMessage="Solo puede ingresar n&uacute;meros" Display="Dynamic" ControlToValidate="txtParentesco"
-                                        ValidationExpression="^[\d]*$"  ></asp:RegularExpressionValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label runat="server" ID="lblDiscapacitadoTitulo" Text="Discapacitado" CssClass="form_label"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                   <asp:CheckBox CssClass="form_checkbox" ID="boolDiscapacitado" runat="server"/>
-                                </td>
-                            </tr>
+                            
                             <tr>
                                 <td>
                                    <asp:Label ID="91" Text="PARSE ERROR:Index was outside the bounds of the array." CssClass="form_field_error_message"/>
