@@ -1,0 +1,120 @@
+.content-more {
+	BORDER-RIGHT: #e8e8e8 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #e8e8e8 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: #e8e8e8 1px solid; WIDTH: 700px; PADDING-TOP: 10px; BORDER-BOTTOM: #e8e8e8 1px solid; BACKGROUND-COLOR: #fbfbfb
+}
+.content-more_Cotizador {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; WIDTH: 700px; PADDING-TOP: 10px; BACKGROUND-COLOR: #fbfbfb
+}
+.grid-view {
+	BORDER-RIGHT: 0px; BORDER-LEFT: 0px; WIDTH: 97%
+}
+.grid-header {
+	BORDER-RIGHT: #ececec 1px dotted; BORDER-TOP: #ececec 1px dotted; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BORDER-LEFT: #ececec 1px dotted; COLOR: #fff; BORDER-BOTTOM: #ececec 1px dotted; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 22px; BACKGROUND-COLOR: #45638e
+}
+.alternating-row TD {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 7px; FONT-SIZE: 10pt; BORDER-LEFT: 0px; COLOR: #004785; BORDER-BOTTOM: #ececec 1px dotted; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 25px; BACKGROUND-COLOR: #fbfaf9; TEXT-ALIGN: left
+}
+.row TD {
+	BORDER-RIGHT: #ececec 1px dotted; BORDER-TOP: #ececec 1px dotted; PADDING-LEFT: 7px; FONT-SIZE: 10pt; BORDER-LEFT: #ececec 1px dotted; COLOR: #004785; BORDER-BOTTOM: #ececec 1px dotted; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 25px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.pager TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../images/background-pager.gif); COLOR: #b82c39; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 20px; BACKGROUND-COLOR: #f5f5f5; TEXT-DECORATION: underline
+}
+.pager A {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #b82c39; FONT-FAMILY: Calibri; TEXT-DECORATION: none
+}
+.pager A:link {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #b82c39; FONT-FAMILY: Calibri; TEXT-DECORATION: none
+}
+.pager A:hover {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #b82c39; FONT-FAMILY: Calibri; TEXT-DECORATION: underline
+}
+.pager A:visited {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #b82c39; FONT-FAMILY: Calibri
+}
+.pager A:active {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #b82c39; FONT-FAMILY: Calibri
+}
+.form_label {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003366; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-ALIGN: right
+}
+.form_importe {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #003366; FONT-FAMILY: Arial, Sans-Serif; TEXT-ALIGN: left
+}
+.form_label_Cotizacion {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #003366; FONT-FAMILY: Arial, Sans-Serif; TEXT-ALIGN: right
+}
+.form_label_title {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #fbfbfb; FONT-FAMILY: Calibri
+}
+.form_table_Cotizacion {
+	BACKGROUND-COLOR: #d2def0; TEXT-ALIGN: center
+}
+.form_table_left {
+	BACKGROUND-COLOR: #f6f6f6; TEXT-ALIGN: left
+}
+.form_table {
+	BACKGROUND-COLOR: #f6f6f6; TEXT-ALIGN: center
+}
+.form_section_header {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #fbfbfb; FONT-FAMILY: Calibri; BACKGROUND-COLOR: navy
+}
+.form_radios {
+	FONT-SIZE: 11px; COLOR: #000; TEXT-ALIGN: left
+}
+.validatorCalloutHighlight {
+	BACKGROUND-COLOR: lemonchiffon
+}
+.form_field_error_message {
+	FONT-WEIGHT: normal; FONT-SIZE: 11pt; COLOR: red; FONT-FAMILY: Calibri
+}
+.label-description {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FONT-SIZE: 12pt; PADDING-BOTTOM: 0px; COLOR: gray; PADDING-TOP: 13px; FONT-FAMILY: Calibri
+}
+.description {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #747474; FONT-FAMILY: Calibri
+}
+.title-form {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #ffffff; FONT-FAMILY: Arial, Sans-Serif; BACKGROUND-COLOR: #45638e; TEXT-ALIGN: center
+}
+.title-form_ {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #d53342; BORDER-BOTTOM: #d53342 2px solid; FONT-FAMILY: Calibri
+}
+.description-box {
+	BORDER-RIGHT: #e1edf5 1px solid; BORDER-TOP: #e1edf5 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../images/background-textbox.gif); BORDER-LEFT: #e1edf5 1px solid; WIDTH: 400px; COLOR: #606060; PADDING-TOP: 4px; BORDER-BOTTOM: #e1edf5 1px solid; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Calibri
+}
+.buttons {
+	BORDER-RIGHT: #a8c7c7 1px solid; BORDER-TOP: #a8c7c7 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../images/background-buttons.gif); BORDER-LEFT: #a8c7c7 1px solid; COLOR: #4a6779; BORDER-BOTTOM: #a8c7c7 1px solid; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Calibri; HEIGHT: 28px; BACKGROUND-COLOR: #dff0fa
+}
+.form_text {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 10pt; BORDER-LEFT: #cccccc 1px solid; COLOR: #666; PADDING-TOP: 3px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Calibri; HEIGHT: 18px
+}
+.form_textQuestion {
+	BORDER-RIGHT: #cccccc 0px solid; BORDER-TOP: #cccccc 0px solid; FONT-SIZE: 13px; BORDER-LEFT: #cccccc 0px solid; WIDTH: 680px; COLOR: #666; BORDER-BOTTOM: #cccccc 0px solid; HEIGHT: 60px; TEXT-ALIGN: left
+}
+.form_select {
+	BORDER-RIGHT: #e1edf5 1px solid; BORDER-TOP: #e1edf5 1px solid; PADDING-LEFT: 4px; FONT-SIZE: 10pt; BORDER-LEFT: #e1edf5 1px solid; COLOR: #606060; PADDING-TOP: 4px; BORDER-BOTTOM: #e1edf5 1px solid; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Calibri; HEIGHT: 24px; BACKGROUND-COLOR: #ffffff
+}
+.header-more {
+	BACKGROUND-IMAGE: url(../images/more-icon.gif); BACKGROUND-REPEAT: no-repeat
+}
+.caracteres {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: red; FONT-FAMILY: Calibri
+}
+.unwatermarked {
+	FONT-WEIGHT: bold; WIDTH: 148px; HEIGHT: 18px
+}
+.watermarked {
+	BORDER-RIGHT: #bebebe 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #bebebe 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 0px; BORDER-LEFT: #bebebe 1px solid; WIDTH: 150px; COLOR: gray; PADDING-TOP: 2px; BORDER-BOTTOM: #bebebe 1px solid; HEIGHT: 20px; BACKGROUND-COLOR: #f0f8ff
+}
+.form_test_area {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 4px; FONT-SIZE: 12pt; BORDER-LEFT: 0px; COLOR: #606060; PADDING-TOP: 4px; BORDER-BOTTOM: 0px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Calibri; HEIGHT: 24px; BACKGROUND-COLOR: #fbfbfb
+}
+.form_radios {
+	FONT-SIZE: 10pt; FONT-FAMILY: Calibri
+}
+.accordionHeader {
+	BORDER-RIGHT: #2f4f4f 0px solid; BORDER-TOP: #2f4f4f 0px solid; MARGIN-TOP: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BORDER-LEFT: #2f4f4f 0px solid; WIDTH: 100%; CURSOR: pointer; COLOR: black; BORDER-BOTTOM: #2f4f4f 0px solid; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Calibri; HEIGHT: 28px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+.btn {
+	BORDER-LEFT-COLOR: #efefef; BORDER-BOTTOM-COLOR: #efefef; FONT: bold 84% 'trebuchet ms',helvetica,sans-serif; COLOR: #fff; BORDER-TOP-COLOR: #efefef; BACKGROUND-COLOR: #3162a0; BORDER-RIGHT-COLOR: #efefef
+}
