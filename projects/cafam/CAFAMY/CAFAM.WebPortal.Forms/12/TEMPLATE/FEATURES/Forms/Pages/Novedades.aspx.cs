@@ -156,12 +156,10 @@ namespace CAFAM.WebPortal.Forms
         {
             try
             {
-                CreateDateControls();
+               CreateDateControls();
                
-
                if (this.IsPostBack)
                {
-                   
                }
                else
                {
