@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using SharpCore.Data;
 
 namespace CAFAM.WebPortal.Forms {
+    [Serializable]
 	public sealed class EntAfiliacionIndividualesDetalle {
 		#region Fields
 		private int id;
