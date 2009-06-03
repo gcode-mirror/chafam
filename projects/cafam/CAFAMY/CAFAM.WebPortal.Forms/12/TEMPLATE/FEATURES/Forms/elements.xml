@@ -8,10 +8,16 @@
       <Property Name="Title" Value="Impresión de Suspensión de Trabajadores"></Property>
     </File>
     <File Url="AfiliacionEmpresas.aspx" Type="GhostableInLibrary">
-      <Property Name="Title" Value="Formulario de Suspensión de Trabajadores"></Property>
+      <Property Name="Title" Value="Formulario de Afiliación de Empresas"></Property>
+    </File>
+    <File Url="AfiliacionIndividuales.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Formulario de Afiliación de Individuales"></Property>
     </File>
     <File Url="rptAfiliacionEmpresas.aspx" Type="GhostableInLibrary">
-      <Property Name="Title" Value="Impresión de Suspensión de Trabajadores"></Property>
+      <Property Name="Title" Value="Impresión de Afiliación de Empresas"></Property>
+    </File>
+    <File Url="Novedades.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Novedades de Trabajador"></Property>
     </File>
   </Module>
 </Elements>
