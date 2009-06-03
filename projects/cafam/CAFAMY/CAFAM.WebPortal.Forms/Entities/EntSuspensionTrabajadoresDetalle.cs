@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 
 namespace CAFAM.WebPortal.Forms
 {
+    [Serializable]
     public sealed class EntSuspensionTrabajadoresDetalle
     {
 		#region Fields

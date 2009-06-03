@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
 
-namespace DAO
+namespace CAFAM.WebPortal.Forms
 {
 	public  class FormNovedadesTrabajador {
 		#region Fields
@@ -769,7 +769,7 @@ namespace DAO
 		#region Methods
 		public void Insert() 
         {
-            using (SqlConnection conn = DAO.ConnectionManager.getCnn())
+            using (SqlConnection conn = ConnectionManager.getCnn())
             {
                 try
                 {
@@ -855,22 +855,6 @@ namespace DAO
                             novedadDetalleTrab.ID_Novedad = ID;
                             novedadDetalleTrab.Insert(sqlTran, conn);
                         }
-
-                        //DAO.FormNovedadesDetalle novDetalle1 = new DAO.FormNovedadesDetalle();
-                        //novDetalle1.ID_Novedad = ID;
-                        //novDetalle1.DEPENDIDTYPE = "prueba";
-                        //novDetalle1.DEPENDIDNUM = "prueba";
-                        //novDetalle1.DEPENDPARENTIDTYPE = "prueba";
-                        //novDetalle1.DEPENDPARENTIDNUM = "prueba";
-                        //novDetalle1.DEPENDPARENTGENDER = "prueba";
-                        //novDetalle1.DEPENDBIRTHDATE = System.DateTime.Today;
-                        //novDetalle1.DEPENDFIRSTSURENAME = "prueba";
-                        //novDetalle1.DEPENDSECONDSURENAME = "prueba";
-                        //novDetalle1.DEPENDFIRSTNAME = "prueba";
-                        //novDetalle1.DEPENDSECONDNAME = "prueba";
-                        //novDetalle1.DEPENDKINDSHIP = "prueba";
-                        //novDetalle1.DEPENDHANDICAPP = "prueba";
-                        //novDetalle1.Insert(sqlTran, conn);
 
                         sqlTran.Commit();
                     }
