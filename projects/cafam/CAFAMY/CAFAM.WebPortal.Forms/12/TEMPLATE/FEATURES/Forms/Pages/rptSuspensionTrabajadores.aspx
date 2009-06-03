@@ -7,7 +7,7 @@
     
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server" ID="MainContent">
     <rsweb:ReportViewer ID="rptvwrSuspensionTrabajadores" runat="server" Font-Names="Verdana" 
-            Font-Size="8pt" Height="700px" Width="700px" ShowPageNavigationControls="false" ShowBackButton="false"
+            Font-Size="8pt" Height="100%" Width="100%" ShowPageNavigationControls="false" ShowBackButton="false"
              ShowDocumentMapButton="false" ShowExportControls="false" 
              ShowFindControls="false" ShowPrintButton="true" ShowRefreshButton="false"
               ShowZoomControl="false">

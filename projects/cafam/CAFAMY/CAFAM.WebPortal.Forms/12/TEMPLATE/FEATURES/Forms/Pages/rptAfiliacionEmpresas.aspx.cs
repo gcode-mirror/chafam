@@ -17,7 +17,6 @@ namespace CAFAM.WebPortal.Forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             EntAfiliacionEmpresa AfiliacionEmpresa = (EntAfiliacionEmpresa)Session["AfiliacionEmpresa"];
             DataSet thisDataSet = RecolectarDatos(AfiliacionEmpresa);
             ReportDataSource datasource = new ReportDataSource("DataSet1_Empresas", thisDataSet.Tables[0]);
@@ -117,14 +116,9 @@ namespace CAFAM.WebPortal.Forms
             oRow["valorUltimaNomina"] = AfiliacionEmpresa.ValorUltimaNomina;
             oRow["correspondienteAlMes"] = AfiliacionEmpresa.CorrespondienteAlMes;
 
-                m_oDs2.Tables["Empresas"].Rows.Add(oRow);
-                oRow = m_oDs2.Tables["Empresas"].NewRow();
-
+            m_oDs2.Tables["Empresas"].Rows.Add(oRow);
+            //oRow = m_oDs2.Tables["Empresas"].NewRow();
             return m_oDs2;
-            
-
-            
-            
         }
     }
 }

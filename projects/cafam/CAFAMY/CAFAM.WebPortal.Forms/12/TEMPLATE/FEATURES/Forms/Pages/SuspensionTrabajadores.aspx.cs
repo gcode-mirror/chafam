@@ -125,7 +125,8 @@ namespace CAFAM.WebPortal.Forms
                 CommitForm();
 
                 // Go to PrintView
-                Response.Redirect("rptSuspensionTrabajadores.aspx");                
+                Session["SuspensionTrabajadores"] = entSusTrabajador;
+                Response.Redirect("rptSuspensionTrabajadores.aspx");
             }
             catch (Exception Ex)
             {
@@ -201,8 +202,6 @@ namespace CAFAM.WebPortal.Forms
                 throw Ex;
             }
         }
-
-        
 
         private void BindData()
         {
